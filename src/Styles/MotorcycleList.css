@@ -1,0 +1,53 @@
+.motorcycle-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #f8f8f8;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.column-title {
+  font-size: 24px;
+  color: #d40000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d40000;
+  padding-bottom: 5px;
+}
+
+.bike-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.bike-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.bike-card:hover {
+  transform: scale(1.05);
+}
+
+.bike-card img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.bike-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}

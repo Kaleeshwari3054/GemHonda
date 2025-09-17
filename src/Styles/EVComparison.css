@@ -1,0 +1,115 @@
+/* ===== CONTAINER ===== */
+.comparison-container {
+  width: 100%;
+  padding: 0;
+  background: #ffffff;
+  font-family: "Arial", sans-serif;
+}
+
+/* ===== BANNER ===== */
+.comparison-banner {
+  position: relative;
+  width: 100%;
+  height: auto; /* Let the height be based on the image */
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto; /* Keep aspect ratio */
+  object-fit: contain; /* Show full image */
+}
+
+
+.banner-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(220, 0, 0, 0.9); /* Honda red overlay */
+  color: #ffffff;
+  padding: 15px 25px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-overlay h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.banner-overlay p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ===== TITLE ===== */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d10000;
+  margin: 20px 0 10px 10px;
+  padding-left: 10px;
+  border-left: 5px solid #d10000;
+}
+
+/* ===== TABLE ===== */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.comparison-table th {
+  background-color: #d10000; /* Honda red */
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.comparison-table tr:hover {
+  background-color: #ffe6e6; /* Light red hover */
+}
+
+/* ===== OFFERS LINK ===== */
+.offers {
+  color: #d10000;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.offers:hover {
+  color: #a80000;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .banner-overlay h2 {
+    font-size: 1.4rem;
+  }
+  .banner-overlay p {
+    font-size: 0.9rem;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

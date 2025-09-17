@@ -1,0 +1,82 @@
+.dealer-section {
+  width: 100%;
+  background: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dealer-banner {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid #e0e0e0;
+  border-radius: 0 0 12px 12px;
+  display: block;
+}
+
+.dealer-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.dealer-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.dealer-subtitle {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.dealer-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.dealer-tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: #f4f4f4;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dealer-tabs button:hover {
+  background: #e0e0e0;
+}
+
+.dealer-tabs .active {
+  background: black;
+  color: white;
+}
+
+.dealer-details {
+  text-align: left;
+  padding: 0 10px;
+}
+
+.dealer-details h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dealer-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.dealer-details li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}

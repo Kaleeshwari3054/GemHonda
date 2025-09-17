@@ -1,0 +1,124 @@
+/* BikeDetails.css */
+
+/* Container */
+.bike-details-container {
+  max-width: 1000px;
+  margin: 90px auto 50px;
+  padding: 20px 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Main Title */
+.bike-details-container h1 {
+  text-align: center;
+  color: #b30000;
+  font-size: 22px;  /* normal readable size */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Price and description */
+.bike-price {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.bike-details {
+  color: black;
+  font-weight: 600;
+}
+
+/* Image */
+.bike-main-image {
+  display: block;
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  margin: 20px auto;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  padding: 6px;
+}
+
+/* Price Table Section */
+.price-list {
+  margin-top: 30px;
+}
+
+.price-list h3 {
+  font-size: 18px;
+  color: #b30000;
+  margin-bottom: 12px;
+  font-weight: 600;
+  border-left: 3px solid #b30000;
+  padding-left: 8px;
+}
+
+/* Table */
+.price-list table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.price-list th,
+.price-list td {
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;   /* normal font size */
+}
+
+.price-list th {
+  background: #b30000;
+  color: #fff;
+  font-weight: 600;
+}
+
+.price-list tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+.price-list tr:hover td {
+  background: #fff0f0;
+}
+
+/* Special rows */
+.price-list .highlight td {
+  background: #ffe6e6;
+  font-weight: 600;
+  color: #b30000;
+}
+
+.price-list .total-row td {
+  background: #b30000;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bike-details-container {
+    padding: 16px;
+  }
+
+  .bike-main-image {
+    max-height: 240px;
+  }
+
+  .price-list th,
+  .price-list td {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}

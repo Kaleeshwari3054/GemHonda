@@ -1,0 +1,90 @@
+/* EVList.css */
+
+/* Container */
+.ev-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 60px 40px 40px; /* extra top padding so it won't overlap header */
+  margin-top: 80px;        /* ensures it clears a fixed header */
+  background-color: #f9f9f9; /* soft neutral background */
+}
+
+/* Card */
+.ev-card {
+  background: #b30000; 
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ev-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Image */
+.ev-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 3px solid #ffffff;
+}
+
+/* Content */
+.ev-card-content {
+  padding: 20px;
+  text-align: left;
+  color: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ev-card-content h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.ev-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ev-price-note {
+  font-size: 14px;
+  color: #ffe6e6;
+  margin-bottom: 12px;
+}
+
+.ev-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f5f5f5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/* Explore button */
+.ev-explore {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #ffffff;
+  color: #b30000;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.ev-explore:hover {
+  background: #ffd6d6;
+  color: #800000;
+}

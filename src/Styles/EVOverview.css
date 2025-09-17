@@ -1,0 +1,47 @@
+.ev-colours-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+.scooter-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.colour-palette {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.colour-swatch {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.colour-swatch.active {
+  border: 2px solid #007aff;
+  box-shadow: 0 0 5px rgba(0, 122, 255, 0.6);
+}
+
+.selected-colour {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.booking{
+    background-color: red;
+    color : white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}

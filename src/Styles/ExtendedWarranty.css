@@ -1,0 +1,133 @@
+.coverage-section {
+  background-color: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.warranty-badge {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.coverage-heading {
+  font-size: 2.5rem;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.coverage-subheading {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.warranty-table-wrapper {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.table-note {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #c00;
+  font-size: 1rem;
+}
+
+.table-note .small-text {
+  font-size: 0.85rem;
+  color: #000;
+}
+
+.warranty-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.warranty-table th,
+.warranty-table td {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.warranty-table thead th {
+  background-color: #cc0000;
+  color: white;
+  font-weight: bold;
+}
+
+.warranty-table tbody td {
+  background-color: #fafafa;
+}
+
+.disclaimer {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 20px;
+}
+.warranty-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.warranty-container h2 {
+  font-size: 28px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.warranty-container p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.warranty-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.warranty-tab {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 180px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.warranty-tab img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.warranty-tab span {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.warranty-tab.active {
+  border-color: red;
+  background-color: #fff0f0;
+}
+
+.warranty-tab:hover {
+  border-color: red;
+}
