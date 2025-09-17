@@ -13,11 +13,11 @@ import Scooter6 from "../../assets/scooter images/Scooter6.jpeg";
 const Activa125 = () => {
   // Color variants for Activa 125
   const colours = [
-    { name: "Majestic Brown Metallic", hex: "#5A3923", image: Scooter1 },
-    { name: "Pearl Amazing White", hex: "#F8F8FF", image: Scooter2 },
-    { name: "Strontium Silver Metallic", hex: "#C0C0C0", image: Scooter3 },
+    { name: "Majestic Brown Metallic", hex: "rgba(22, 31, 49, 1)", image: Scooter1 },
+    { name: "Pearl Amazing White", hex: "rgb(105, 30, 33)", image: Scooter2 },
+    { name: "Strontium Silver Metallic", hex: "#6B6B6B", image: Scooter3 },
     { name: "Deep Blue Metallic", hex: "#1B4371", image: Scooter4 },
-    { name: "Matte Axis Grey", hex: "#6B6B6B", image: Scooter5 },
+    { name: "Matte Axis Grey", hex: "#C0C0C0", image: Scooter5 },
     { name: "Pearl Igneous Black", hex: "#1C1C1C", image: Scooter6 },
   ];
 
