@@ -6,9 +6,11 @@
  "scripts": {
   "dev": "vite",
   "build": "vite build",
+  "build:static": "vite build --base=./",
+  "build:gh": "vite build --base=/GemHonda/",
   "lint": "eslint .",
   "preview": "vite preview",
-  "predeploy": "npm run build",
+  "predeploy": "npm run build && powershell -NoProfile -Command \"if (Test-Path CNAME) { Copy-Item CNAME dist\\CNAME -Force }\"",
     "deploy": "gh-pages -d dist -b gh-pages"
 
 },
