@@ -1,6 +1,6 @@
 // src/pages/Products/BikeList.jsx
 import React from 'react';
-import '../../Styles/BikeList .css';
+import '../../Styles/BikeList.css';
 import {Link} from 'react-router-dom'
 
 const bikes=[
@@ -58,7 +58,7 @@ const bikes=[
     { name: "Blue", image: "https://imgd.aeplcdn.com/1056x594/n/otgtkgb_1848458.jpg?q=80" },
     { name: "Black", image: "https://imgd.aeplcdn.com/1056x594/n/zdqbafb_1809981.jpg?q=80" },
     { name: "Genny Grey Metallic", image: "https://imgd.aeplcdn.com/1056x594/n/om9tkgb_1848456.jpg?q=80"},
-    { name: "Matte Axis Gray Metallic", image: "https://imgd.aeplcdn.com/1056x594/n/ppdtkgb_1848454.jpg?q=80"},
+    { name: "Matte Axis Gray Metallic", image: "https://imgd.aeplcdn.com/1056x594/n/ppdtkgb_1848454.jpg?q=80" },
     { name: "Mat Axis Grey Metallic", image: "https://imgd.aeplcdn.com/1056x594/n/u2nbafb_1809977.jpg?q=80"},
   ]
 },
@@ -351,5 +351,6 @@ const BikeList = () => {
 };
 
 export default BikeList;
+
 
 

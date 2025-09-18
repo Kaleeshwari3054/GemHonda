@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../../Styles/ScooterList .css";
+import "../../Styles/ScooterList.css";
 
 const ScooterList = () => {
   const scooters = [
@@ -85,3 +85,5 @@ const ScooterList = () => {
 };
 
 export default ScooterList;
+
+
