@@ -9,7 +9,7 @@
   "lint": "eslint .",
   "preview": "vite preview",
   "predeploy": "npm run build",
-    "deploy": "git subtree split --prefix dist -b gh-pages-branch && git push origin gh-pages-branch:gh-pages --force && git branch -D gh-pages-branch"
+    "deploy": "gh-pages -d dist -b gh-pages"
 
 },
   "dependencies": {
