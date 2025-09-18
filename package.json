@@ -10,7 +10,8 @@
   "lint": "eslint .",
   "preview": "vite preview",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist"
+    "deploy": "git subtree split --prefix dist -b gh-pages-branch && git push origin gh-pages-branch:gh-pages --force && git branch -D gh-pages-branch"
+
 },
   "dependencies": {
     "bootstrap": "^5.3.8",
