@@ -3,20 +3,21 @@ import { Link } from "react-router-dom";
 import "../../Styles/ScooterDetails.css";
 
 // Import scooter images
-import Scooter1 from "../../assets/Activa125/Activa125-1.png";
-import Scooter2 from "../../assets/Activa125/Activa125-2.jpg";
-import Scooter3 from "../../assets/Activa125/Activa125-3.jpg";
-import Scooter4 from "../../assets/Activa125/Activa125-4.webp";
-import Scooter5 from "../../assets/Activa125/Activa125-5.jpg";
+import Scooter1 from "../../assets/scooter images/Scooter1.jpeg";
+import Scooter2 from "../../assets/scooter images/Scooter2.jpeg";
+import Scooter3 from "../../assets/scooter images/Scooter3.jpeg";
+import Scooter4 from "../../assets/scooter images/Scooter4.jpeg";
+import Scooter5 from "../../assets/scooter images/Scooter5.jpeg";
+import Scooter6 from "../../assets/scooter images/Scooter6.jpeg";
 
-const Activa125 = () => {
-  // Color variants for Activa 125
+const Dio110 = () => {
+  // Color variants for Dio 110
   const colours = [
-    { name: "Majestic Brown Metallic", hex: "rgb(119, 33, 42)", image: Scooter1 },
-    { name: "Pearl Amazing White", hex: "#6B6B6B", image: Scooter2 },
-    { name: "Strontium Silver Metallic", hex: "#000000", image: Scooter3 },
-    { name: "Deep Blue Metallic", hex: "#1B4371", image: Scooter4 },
-    { name: "Matte Axis Grey", hex: "#C0C0C0", image: Scooter5 },
+    { name: "Pearl Sports Yellow", hex: "#FFD700", image: Scooter2 },
+    { name: "Candy Jazzy Blue", hex: "#1E90FF", image: Scooter4 },
+    { name: "Pearl Igneous Black", hex: "#1C1C1C", image: Scooter6 },
+    { name: "Matte Axis Grey", hex: "#6B6B6B", image: Scooter5 },
+    { name: "Pearl Amazing White", hex: "#F8F8FF", image: Scooter3 },
   ];
 
   const [selectedColour, setSelectedColour] = useState(colours[0]);
@@ -25,54 +26,56 @@ const Activa125 = () => {
   // Specifications data
   const specifications = {
     engine: {
-      displacement: "124.9 cc",
-      maxPower: "8.29 PS @ 6500 rpm",
-      maxTorque: "10.54 Nm @ 5000 rpm",
+      displacement: "109.51 cc",
+      maxPower: "8.04 PS @ 7000 rpm",
+      maxTorque: "9.30 Nm @ 5500 rpm",
       fuelSystem: "PGM-FI",
       ignition: "DC-CDI",
       transmission: "V-Matic (Automatic)"
     },
     dimensions: {
-      length: "1833 mm",
-      width: "708 mm",
-      height: "1156 mm",
+      length: "1781 mm",
+      width: "674 mm",
+      height: "1061 mm",
       wheelbase: "1238 mm",
-      groundClearance: "153 mm",
-      seatHeight: "780 mm",
-      kerbWeight: "118 kg"
+      groundClearance: "155 mm",
+      seatHeight: "765 mm",
+      kerbWeight: "101 kg"
     },
     performance: {
       fuelTank: "5.3 litres",
-      mileage: "60 kmpl (approx)",
-      topSpeed: "85 kmph",
+      mileage: "64 kmpl (approx)",
+      topSpeed: "83 kmph",
       brakes: "Drum (Front & Rear)",
       tyres: "90/100-10 (Front & Rear)"
     }
   };
 
   const features = [
-    "LED Headlamp with Position Lamp",
-    "Digital Analog Meter",
-    "Mobile Charging Socket",
-    "External Fuel Lid",
-    "Metal Body",
-    "Combi Brake System (CBS)",
+    "LED Headlamp with DRL",
+    "TFT Digital Display",
+    "Smart Key System",
+    "USB-C Charging Port",
+    "Idle Stop System",
+    "Mobile Connectivity",
     "Side Stand Indicator",
-    "Service Due Indicator"
+    "Service Due Indicator",
+    "Sporty Design",
+    "Under Seat Storage"
   ];
 
   return (
     <div className="scooter-details-container">
       {/* Hero Section */}
-      {/* <div className="hero-section">
+      <div className="hero-section">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div className="hero-content">
-                <h1 className="hero-title">Honda Activa 125</h1>
-                <p className="hero-subtitle">India's Most Trusted Scooter</p>
+                <h1 className="hero-title">Honda Dio 110</h1>
+                <p className="hero-subtitle">Compact Sporty Design</p>
                 <div className="price-section">
-                  <span className="price">₹ 94,422</span>
+                  <span className="price">₹ 78,349</span>
                   <span className="price-note">Ex-showroom Price</span>
                 </div>
                 <div className="hero-buttons">
@@ -87,12 +90,12 @@ const Activa125 = () => {
             </div>
             <div className="col-lg-6">
               <div className="hero-image">
-                <img src={selectedColour.image} alt="Honda Activa 125" className="img-fluid" />
+                <img src={selectedColour.image} alt="Honda Dio 110" className="img-fluid" />
               </div>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Navigation Tabs */}
       <div className="nav-tabs-section">
@@ -151,34 +154,34 @@ const Activa125 = () => {
               <div className="row">
                 <div className="col-lg-8">
                   <div className="overview-content">
-                    <h2>Honda Activa 125 - The Perfect Urban Companion</h2>
+                    <h2>Honda Dio 110 - Compact Smart Scooter</h2>
                     <p className="lead">
-                      The Honda Activa 125 continues to be India's most trusted scooter, combining 
-                      reliability, fuel efficiency, and modern features in one perfect package.
+                      The Honda Dio 110 offers the perfect blend of sporty design and smart features 
+                      in a compact, fuel-efficient package.
                     </p>
                     <p>
-                      With its refined 125cc engine, the Activa 125 delivers smooth performance 
-                      and excellent fuel economy. The scooter features a spacious under-seat storage, 
-                      comfortable seating, and Honda's proven build quality that has made it a 
-                      household name across India.
+                      With its youthful styling, advanced TFT display, and smart connectivity, 
+                      the Dio 110 is designed for the modern urban rider who values both style 
+                      and substance. The efficient 110cc engine ensures excellent fuel economy 
+                      without compromising on performance.
                     </p>
                     <div className="key-highlights">
                       <h4>Key Highlights</h4>
                       <div className="row">
                         <div className="col-md-6">
                           <ul className="highlight-list">
-                            <li>124.9cc HET Engine</li>
-                            <li>60 kmpl Mileage</li>
-                            <li>LED Headlamp</li>
-                            <li>Digital-Analog Meter</li>
+                            <li>109.51cc HET Engine</li>
+                            <li>TFT Digital Display</li>
+                            <li>Smart Key System</li>
+                            <li>LED Headlamp with DRL</li>
                           </ul>
                         </div>
                         <div className="col-md-6">
                           <ul className="highlight-list">
-                            <li>18L Under Seat Storage</li>
-                            <li>Mobile Charging Socket</li>
-                            <li>Combi Brake System</li>
-                            <li>Metal Body</li>
+                            <li>USB-C Charging Port</li>
+                            <li>64 kmpl Mileage</li>
+                            <li>Lightweight 101 kg</li>
+                            <li>Sporty Design</li>
                           </ul>
                         </div>
                       </div>
@@ -190,19 +193,19 @@ const Activa125 = () => {
                     <h4>Quick Specifications</h4>
                     <div className="spec-item">
                       <span className="spec-label">Engine:</span>
-                      <span className="spec-value">124.9cc</span>
+                      <span className="spec-value">109.51cc</span>
                     </div>
                     <div className="spec-item">
                       <span className="spec-label">Power:</span>
-                      <span className="spec-value">8.29 PS</span>
+                      <span className="spec-value">8.04 PS</span>
                     </div>
                     <div className="spec-item">
                       <span className="spec-label">Mileage:</span>
-                      <span className="spec-value">60 kmpl</span>
+                      <span className="spec-value">64 kmpl</span>
                     </div>
                     <div className="spec-item">
                       <span className="spec-label">Weight:</span>
-                      <span className="spec-value">118 kg</span>
+                      <span className="spec-value">101 kg</span>
                     </div>
                   </div>
                 </div>
@@ -308,7 +311,7 @@ const Activa125 = () => {
           {activeTab === 'price' && (
             <div className="tab-pane active">
               <div className="price-section">
-                <h3>Honda Activa 125 Price Details</h3>
+                <h3>Honda Dio 110 Price Details</h3>
                 <div className="price-table-wrapper">
                   <table className="table table-striped price-table">
                     <thead>
@@ -316,43 +319,36 @@ const Activa125 = () => {
                         <th>Variant</th>
                         <th>STD</th>
                         <th>DLX</th>
-                        <th>H-SMART</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td>Ex-Showroom</td>
-                        <td>₹94,422</td>
-                        <td>₹98,864</td>
-                        <td>₹1,02,865</td>
+                        <td>₹78,349</td>
+                        <td>₹81,549</td>
                       </tr>
                       <tr>
                         <td>Insurance</td>
-                        <td>₹6,809</td>
-                        <td>₹6,930</td>
-                        <td>₹6,965</td>
+                        <td>₹5,785</td>
+                        <td>₹5,914</td>
                       </tr>
                       <tr>
                         <td>Road Tax</td>
-                        <td>₹9,442</td>
-                        <td>₹9,886</td>
-                        <td>₹10,287</td>
+                        <td>₹7,835</td>
+                        <td>₹8,155</td>
                       </tr>
                       <tr className="highlight-row">
                         <td><strong>On Road Price</strong></td>
-                        <td><strong>₹1,10,673</strong></td>
-                        <td><strong>₹1,15,680</strong></td>
-                        <td><strong>₹1,20,117</strong></td>
+                        <td><strong>₹91,969</strong></td>
+                        <td><strong>₹95,618</strong></td>
                       </tr>
                       <tr>
                         <td>Accessories</td>
                         <td>₹4,980</td>
                         <td>₹4,980</td>
-                        <td>₹4,980</td>
                       </tr>
                       <tr>
                         <td>Registration & Handling</td>
-                        <td>₹1,985</td>
                         <td>₹1,985</td>
                         <td>₹1,985</td>
                       </tr>
@@ -373,8 +369,8 @@ const Activa125 = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
-              <h3>Ready to Experience Honda Activa 125?</h3>
-              <p>Book a test ride today and feel the difference</p>
+              <h3>Ready to Experience Honda Dio 110?</h3>
+              <p>Book a test ride today and feel the sporty difference</p>
               <div className="cta-buttons">
                 <Link to="/contact-container" className="btn btn-primary btn-lg me-3">
                   Book Test Ride
@@ -391,4 +387,4 @@ const Activa125 = () => {
   );
 };
 
-export default Activa125;
+export default Dio110;

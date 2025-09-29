@@ -1,0 +1,273 @@
+.google-reviews-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviews-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.google-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.google-badge span {
+  font-weight: 600;
+  color: #333;
+}
+
+.reviews-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  animation: scrollReviews 30s linear infinite; /* speed control */
+}
+
+.review-card {
+  flex: 0 0 calc(33.333% - 20px); /* 3 at a time on desktop */
+  margin: 0 10px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+}
+
+/* Continuous scroll animation */
+@keyframes scrollReviews {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%); /* shift by half, since we duplicate list */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .review-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    flex: 0 0 calc(100% - 20px);
+  }
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e9ecef;
+}
+
+.reviewer-details h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.review-date {
+  margin: 2px 0 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.review-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.2s ease;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.google-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  opacity: 0.3;
+}
+
+.google-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.reviews-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: #d50000;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .review-card {
+    flex: 0 0 calc(50% - 20px);
+  }
+  
+  .reviews-track {
+    width: calc(100% * 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .google-reviews-section {
+    padding: 60px 0;
+  }
+  
+  .reviews-header h2 {
+    font-size: 2rem;
+  }
+  
+  .review-card {
+    flex: 0 0 calc(100% - 20px);
+    margin: 0 10px;
+  }
+  
+  .reviews-track {
+    width: calc(100% * 6);
+  }
+  
+  .reviewer-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .reviewer-details h4 {
+    font-size: 1rem;
+  }
+  
+  .review-text {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .reviews-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .review-card {
+    padding: 20px;
+    margin: 0 5px;
+  }
+  
+  .google-badge {
+    padding: 8px 16px;
+  }
+  
+  .google-badge span {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for smooth scrolling */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.review-card {
+  animation: slideIn 0.6s ease-out;
+}

@@ -5,9 +5,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import HomePage from "./pages/HomePage";
-import RideCards from "./pages/RideCards";
-import ImageCarousel from "./pages/ImageCarousel";
-import CommunityCarousel from "./pages/CommunityCarousel";
+// import RideCards from "./pages/RideCards";
+// import ImageCarousel from "./pages/ImageCarousel";
+// import CommunityCarousel from "./pages/CommunityCarousel";
+import GoogleRevies from "./pages/GoogleReviews";
+import FounderSection from "./pages/FounderSection";
 import EVList from "./pages/sales/EVList"; // Make sure this exists
 import ScooterList from "./pages/sales/ScooterList";
 // import DealerNetworkSection from "./pages/dealer/DealerNetworkSection";
@@ -37,9 +39,11 @@ function App() {
           element={
             <>
               <HomePage />
-              <RideCards />
-              <ImageCarousel />
-              <CommunityCarousel />
+              {/* <RideCards /> */}
+              {/* <ImageCarousel /> */}
+              {/* <CommunityCarousel /> */}
+              <GoogleRevies />
+              <FounderSection/>
             </>
           }
         />

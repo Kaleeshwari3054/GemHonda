@@ -1,28 +1,22 @@
 import React from 'react';
 import '../Styles/Footer.css';
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaYoutube,
-  FaPhoneAlt,
-  FaCommentDots,
-  FaClipboardList
-} from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaPhoneAlt, FaCommentDots, FaClipboardList } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <>
       {/* Floating Icons */}
       <div className="floating-icons">
-        <div className="icon"><FaPhoneAlt /></div>
-        <div className="icon"><FaCommentDots /></div>
+        <a href="tel:18001033434" className="icon"><FaPhoneAlt /></a>
+        <a href="mailto:customercare@honda.hmsi.in" className="icon"><FaCommentDots /></a>
         <div className="icon"><FaClipboardList /></div>
       </div>
 
       {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
+          
+          {/* Newsletter */}
           <div className="newsletter">
             <p className="footer-heading">Signup for Newsletter</p>
             <div className="newsletter-form">
@@ -31,77 +25,24 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-links">
-            <div><h4>EV</h4></div>
-            <div><h4>Motorcycles</h4></div>
-            <div><h4>Accessories</h4></div>
-            <div>
-              <h4>Corporate</h4>
-              <ul>
-                <li>How we move you</li>
-                <li>Our Factories</li>
-                <li>History</li>
-                <li>Technology</li>
-                <li>Careers</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Racing</h4>
-              <ul>
-                <li>World Championship</li>
-                <li>Honda Racing India</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Our Dealers</h4>
-              <ul>
-                <li>Institutional Sales</li>
-                <li>FAQs</li>
-                <li>Creative Gallery</li>
-              </ul>
-            </div>
-          </div>
-
+           {/* Social Media */}
           <div className="footer-social">
-            <div>
-              <h5>Honda2wheelersIndia</h5>
-              <span>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-              </span>
-            </div>
-            <div>
-              <h5>Honda BigWing India</h5>
-              <span>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-              </span>
-            </div>
-            <div>
-              <h5>Honda Racing India</h5>
-              <span>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-              </span>
-            </div>
-            <div>
-              <h5>Honda India Foundation</h5>
-              <span>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
-                <a href="#" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-              </span>
-            </div>
+            <h5>Follow Us</h5>
+            <span>
+              <a href="https://www.facebook.com/HondaIndia" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+              <a href="https://www.instagram.com/honda_india/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/company/honda-india/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+              <a href="https://www.youtube.com/user/Honda2WheelersIndia" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+            </span>
           </div>
 
+          {/* Footer Bottom */}
           <div className="footer-bottom">
             <p>© 2025 Honda Motorcycle and Scooter India Pvt. Ltd. All Rights Reserved.</p>
-            <p>For Assistance Call: 1800 103 3434 | Email: customercare@honda.hmsi.in</p>
+            <p>
+              For Assistance: <a href="tel:18001033434">1800 103 3434</a> | 
+              Email: <a href="mailto:customercare@honda.hmsi.in">customercare@honda.hmsi.in</a>
+            </p>
           </div>
         </div>
       </footer>

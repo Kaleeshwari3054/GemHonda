@@ -1,5 +1,52 @@
 /* BikeDetails.css */
 
+.bike-main-image {
+  width: 400px;
+  transition: transform 0.8s ease;
+}
+
+.spin-once {
+  animation: spin360 2s ease-in-out 1;
+}
+
+@keyframes spin360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(260deg);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Container */
 .bike-details-container {
   max-width: 1000px;
