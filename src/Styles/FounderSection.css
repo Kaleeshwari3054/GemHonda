@@ -390,3 +390,120 @@
 .value-item:nth-child(4) {
   animation-delay: 0.3s;
 }
+
+/* Company Location Styles */
+.company-location {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.company-location h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.location-info {
+  text-align: left;
+}
+
+.company-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.company-logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #d50000;
+  box-shadow: 0 8px 25px rgba(213, 0, 0, 0.2);
+}
+
+.contact-details h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d50000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-details p i {
+  color: #d50000;
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+.google-map {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.google-map iframe {
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.google-map:hover iframe {
+  filter: grayscale(0%);
+}
+
+/* Responsive Design for Location */
+@media (max-width: 768px) {
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .location-info {
+    text-align: center;
+  }
+  
+  .contact-details p {
+    justify-content: center;
+  }
+  
+  .company-location h3 {
+    font-size: 1.8rem;
+  }
+  
+  .company-logo img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-details p {
+    font-size: 0.9rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-details p i {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}

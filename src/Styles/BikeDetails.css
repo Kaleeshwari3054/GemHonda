@@ -31,6 +31,47 @@
   }
 }
 
+/* 360° View Styles */
+.bike-image-container {
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.bike-image-wrapper {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.1s ease-out;
+  perspective: 1000px;
+}
+
+.bike-image-wrapper.view-360 {
+  transform-style: preserve-3d;
+}
+
+.view-360-indicator {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(213, 0, 0, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.bike-image-wrapper.view-360:hover .view-360-indicator {
+  opacity: 1;
+}
 
 
 

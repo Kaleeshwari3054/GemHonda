@@ -128,6 +128,37 @@ const FounderSection = () => {
             </div>
           </div>
         </div>
+
+        {/* Company Location & Contact */}
+        <div className="company-location">
+          <h3>Visit Our Showroom</h3>
+          <div className="location-content">
+            <div className="location-info">
+              <div className="company-logo">
+                <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" alt="Gem Honda Logo" />
+              </div>
+              <div className="contact-details">
+                <h4>Gem Honda</h4>
+                <p><i className="fas fa-map-marker-alt"></i> 2/9 Yaathaval Street, Virugambakkam, Chennai, Tamil Nadu 600092</p>
+                <p><i className="fas fa-phone"></i> +91 909 432 0000</p>
+                <p><i className="fas fa-envelope"></i> thegemhonda@gmail.com</p>
+                <p><i className="fas fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</p>
+              </div>
+            </div>
+            <div className="google-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8267!2d80.2084!3d13.0358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267!2sVirugambakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="300"
+                style={{ border: 0, borderRadius: "10px" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Gem Honda Location"
+              ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
