@@ -423,12 +423,18 @@
 }
 
 .company-logo img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #d50000;
-  box-shadow: 0 8px 25px rgba(213, 0, 0, 0.2);
+  border: 5px solid #d50000;
+  box-shadow: 0 10px 30px rgba(213, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(213, 0, 0, 0.4);
 }
 
 .contact-details h4 {
@@ -456,18 +462,36 @@
 }
 
 .google-map {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  height: 350px;
 }
 
 .google-map iframe {
-  filter: grayscale(20%);
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(10%);
   transition: filter 0.3s ease;
 }
 
 .google-map:hover iframe {
   filter: grayscale(0%);
+}
+
+/* Map overlay for better styling */
+.google-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(213,0,0,0.1), transparent);
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Responsive Design for Location */
@@ -490,8 +514,12 @@
   }
   
   .company-logo img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .google-map {
+    height: 300px;
   }
 }
 
@@ -505,5 +533,14 @@
   .contact-details p i {
     margin-right: 0;
     margin-bottom: 5px;
+  }
+  
+  .google-map {
+    height: 250px;
+  }
+  
+  .company-logo img {
+    width: 100px;
+    height: 100px;
   }
 }

@@ -88,55 +88,11 @@ const ScooterOverview = () => {
   const [selectedImage, setSelectedImage] = useState(colors[0].image);
   const [selectedColorName, setSelectedColorName] = useState(colors[0].name);
   const [selectedColor, setSelectedColor] = useState(colors[0]);
-  const [rotation, setRotation] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-
-  // 360° View handlers
-  const handleMouseDown = (e) => {
-    if (selectedColor.is360) {
-      setIsDragging(true);
-      setStartX(e.clientX);
-    }
-  };
-
-  const handleMouseMove = (e) => {
-    if (isDragging && selectedColor.is360) {
-      const deltaX = e.clientX - startX;
-      const newRotation = rotation + deltaX * 0.5;
-      setRotation(newRotation);
-      setStartX(e.clientX);
-    }
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  const handleWheel = (e) => {
-    if (selectedColor.is360) {
-      e.preventDefault();
-      const newRotation = rotation + e.deltaY * 0.2;
-      setRotation(newRotation);
-    }
-  };
-
-  useEffect(() => {
-    if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      return () => {
-        document.removeEventListener('mousemove', handleMouseMove);
-        document.removeEventListener('mouseup', handleMouseUp);
-      };
-    }
-  }, [isDragging, startX, rotation]);
 
   const handleColorChange = (color) => {
     setSelectedImage(color.image);
     setSelectedColorName(color.name);
     setSelectedColor(color);
-    setRotation(0); // Reset rotation when changing colors
   };
 
   return (

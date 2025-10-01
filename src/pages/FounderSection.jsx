@@ -135,7 +135,7 @@ const FounderSection = () => {
           <div className="location-content">
             <div className="location-info">
               <div className="company-logo">
-                <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1" alt="Gem Honda Logo" />
+                <img src="/logo.png" alt="Gem Honda Logo" />
               </div>
               <div className="contact-details">
                 <h4>Gem Honda</h4>
@@ -147,10 +147,10 @@ const FounderSection = () => {
             </div>
             <div className="google-map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8267!2d80.2084!3d13.0358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267!2sVirugambakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.826743240344!2d80.20840731482213!3d13.035804990788547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526711ee0a2f73%3A0x5b64d5b6e6c8a8a8!2s2%2F9%2C%20Yaathaval%20St%2C%20Virugambakkam%2C%20Chennai%2C%20Tamil%20Nadu%20600092!5e0!3m2!1sen!2sin!4v1703123456789!5m2!1sen!2sin"
                 width="100%"
-                height="300"
-                style={{ border: 0, borderRadius: "10px" }}
+                height="100%"
+                style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
