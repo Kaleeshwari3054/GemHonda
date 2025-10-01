@@ -59,81 +59,65 @@
 
 // export default ContactContainer;
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 const ScooterViewer360 = ({ frames, className = "" }) => {
   const [currentFrame, setCurrentFrame] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
-  const [autoRotate, setAutoRotate] = useState(true);
-  const autoRotateRef = useRef(null);
-
+  const frameRef = useRef(0);
   const totalFrames = frames.length;
 
-  // Auto-rotate
-  useEffect(() => {
-    if (autoRotate && !isDragging) {
-      autoRotateRef.current = setInterval(() => {
-        setCurrentFrame((prev) => (prev + 1) % totalFrames);
-      }, 80); // adjust speed
-    } else {
-      clearInterval(autoRotateRef.current);
-    }
+  // ✅ Function to update frame smoothly
+  const updateFrame = (change) => {
+    frameRef.current = (frameRef.current + change + totalFrames) % totalFrames;
+    setCurrentFrame(frameRef.current);
+  };
 
-    return () => clearInterval(autoRotateRef.current);
-  }, [autoRotate, isDragging, totalFrames]);
-
-  // Mouse drag
+  // 🖱️ Mouse drag
   const handleMouseDown = (e) => {
     setIsDragging(true);
-    setAutoRotate(false);
     setStartX(e.clientX);
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
     const deltaX = e.clientX - startX;
-    const frameChange = Math.floor(deltaX / 5); // sensitivity
-    if (Math.abs(frameChange) > 0) {
-      setCurrentFrame((prev) => {
-        let newFrame = (prev + frameChange) % totalFrames;
-        if (newFrame < 0) newFrame += totalFrames;
-        return newFrame;
-      });
+    const sensitivity = 4; // smaller = faster rotation
+    const frameChange = Math.floor(deltaX / sensitivity);
+    if (frameChange !== 0) {
+      updateFrame(frameChange);
       setStartX(e.clientX);
     }
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-    setTimeout(() => setAutoRotate(true), 3000);
+  const handleMouseUp = () => setIsDragging(false);
+
+  // 🖱️ Mouse scroll (wheel)
+  const handleWheel = (e) => {
+    e.preventDefault();
+    const direction = e.deltaY > 0 ? 1 : -1; // scroll down → forward, up → back
+    updateFrame(direction);
   };
 
-  // Touch support
+  // 📱 Touch drag
   const handleTouchStart = (e) => {
     setIsDragging(true);
-    setAutoRotate(false);
     setStartX(e.touches[0].clientX);
   };
 
   const handleTouchMove = (e) => {
     if (!isDragging) return;
     const deltaX = e.touches[0].clientX - startX;
-    const frameChange = Math.floor(deltaX / 5);
-    if (Math.abs(frameChange) > 0) {
-      setCurrentFrame((prev) => {
-        let newFrame = (prev + frameChange) % totalFrames;
-        if (newFrame < 0) newFrame += totalFrames;
-        return newFrame;
-      });
+    const sensitivity = 4;
+    const frameChange = Math.floor(deltaX / sensitivity);
+    if (frameChange !== 0) {
+      updateFrame(frameChange);
       setStartX(e.touches[0].clientX);
     }
   };
 
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    setTimeout(() => setAutoRotate(true), 3000);
-  };
+  const handleTouchEnd = () => setIsDragging(false);
 
   return (
     <div
@@ -143,16 +127,18 @@ const ScooterViewer360 = ({ frames, className = "" }) => {
         cursor: isDragging ? "grabbing" : "grab",
         userSelect: "none",
         overflow: "hidden",
-        borderRadius: "15px",
-        background: "#f5f5f5",
+        borderRadius: "12px",
+        background: "#f9f9f9",
         padding: "10px",
-        maxWidth: "500px",
-        margin: "0 auto"
+        maxWidth: "600px",
+        margin: "0 auto",
+        boxShadow: "0 5px 20px rgba(0,0,0,0.1)",
       }}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
+      onWheel={handleWheel}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -160,7 +146,13 @@ const ScooterViewer360 = ({ frames, className = "" }) => {
       <img
         src={frames[currentFrame]}
         alt="Scooter 360 view"
-        style={{ width: "100%", height: "auto", display: "block" }}
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block",
+          pointerEvents: "none",
+          userSelect: "none",
+        }}
         draggable={false}
       />
     </div>
