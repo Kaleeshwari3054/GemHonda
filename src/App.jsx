@@ -25,7 +25,7 @@ import Activa125 from "./pages/scooters/Activa125";
 import Activa110 from "./pages/scooters/Activa110";
 import Dio125 from "./pages/scooters/Dio125";
 import Dio110 from "./pages/scooters/Dio110";
-
+import "./App.css";
 
 // import ExtendedWarranty from "./pages/Services/Maintenance/ExtendedWarranty";
 
