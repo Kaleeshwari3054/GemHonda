@@ -15,7 +15,7 @@ const scooters = [
     description:
       "The Activa 125 2025 edition blends trusted Honda reliability with modern upgrades—featuring a TFT display, USB-C charging, and idle stop system for smarter, sleeker daily commuting.",
     image:
-      "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FPLP-images%2FActiva-125.png%3Fh%3D638%26iar%3D0%26w%3D1038&w=1080&q=75",
+   "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/PLP-images/Activa-125.png",
   },
   {
     name: "Activa 110",
@@ -28,8 +28,7 @@ const scooters = [
     ratingsCount: "3,120 Ratings",
     description:
       "Lightweight and nimble, the Activa 110 delivers easy handling and convenience in dense urban environments—now with enhanced styling and refined performance.",
-    image:
-      "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FPLP-images%2FActiva-110.png%3Fh%3D638%26iar%3D0%26w%3D1038&w=1080&q=75",
+    image: "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/PLP-images/Activa-110.png",
   },
   {
     name: "Dio 125",
@@ -42,8 +41,7 @@ const scooters = [
     ratingsCount: "4,010 Ratings",
     description:
       "A sporty head-turner equipped with a modern TFT console, smart key, USB-C port, and idle stop tech—Dio 125 2025 is made for agile and connected city riding.",
-    image:
-      "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FPLP-images%2FDio-125.png%3Fh%3D638%26iar%3D0%26w%3D1038&w=1080&q=75",
+    image: "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/PLP-images/Dio-125.png",
   },
   {
     name: "Dio 110",
@@ -56,8 +54,7 @@ const scooters = [
     ratingsCount: "2,875 Ratings",
     description:
       "Compact yet bold, the updated Dio 110 offers efficient maneuverability with premium features like a TFT display and smart connectivity in a sleek frame.",
-    image:
-      "https://www.honda2wheelersindia.com/_next/image?url=https%3A%2F%2Fedge.sitecorecloud.io%2Fhondamotorc388f-hmsi8ece-prodb777-e813%2Fmedia%2FProject%2FHONDA2WI%2Fhonda2wheelersindia%2Fmotorcycle%2FPLP-images%2FDio-110.png%3Fh%3D638%26iar%3D0%26w%3D1038&w=1080&q=75",
+    image: "https://edge.sitecorecloud.io/hondamotorc388f-hmsi8ece-prodb777-e813/media/Project/HONDA2WI/honda2wheelersindia/motorcycle/PLP-images/Dio-110.png",
   },
 ];
 
@@ -69,6 +66,7 @@ const ScooterList = () => {
         <img
           src="https://www.vihaanhonda.com/assets/img/Activa_special_Edition_homeBanner.jpg"
           alt="Scooter Banner"
+          className="banner-image-Scooter"
         />
         <div className="banner-overlay">
           <h1>Explore Our Scooters</h1>

@@ -1,0 +1,133 @@
+
+.google-map-section {
+  padding: 48px 20px;
+  background-color: #f7f7f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.map-wrapper {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* LEFT: info card */
+.info-card {
+  flex: 0 0 36%; /* fixed-ish left column */
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(20,20,20,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.logo-container img {
+  width: 120px;
+  height: auto;
+  display: inline-block;
+}
+
+.contact-info h3 {
+  margin: 6px 0 10px 0;
+  color: #d32f2f; /* brand red */
+}
+
+.contact-info p {
+  margin: 8px 0;
+  color: #444;
+  line-height: 1.45;
+}
+
+.contact-info a { color: inherit; text-decoration: none; }
+.contact-info a:hover { text-decoration: underline; }
+
+.map-utilities { margin-top: 12px; }
+.maps-link {
+  display: inline-block;
+  padding: 8px 12px;
+  background: #d32f2f;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.maps-link:hover { opacity: 0.95; }
+
+/* RIGHT: map */
+.map-container {
+  flex: 1 1 62%;
+  height: 420px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(20,20,20,0.06);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Red pin overlay - purely visual, non-interactive */
+.pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%); /* keep the dot above the centre */
+  pointer-events: none;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.pin .stick {
+  width: 3px;
+  height: 28px;
+  background: #d32f2f;
+  border-radius: 2px;
+  transform: translateY(2px);
+}
+.pin .dot {
+  width: 18px;
+  height: 18px;
+  background: #d32f2f;
+  border-radius: 50%;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  margin-left: -9px;
+  margin-bottom: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .map-wrapper { flex-direction: column-reverse; gap: 18px; }
+  .info-card, .map-container { flex: 1 1 100%; }
+  .map-container { height: 360px; }
+}
+
+@media (max-width: 480px) {
+  .map-container { height: 320px; }
+  .logo-container img { width: 100px; }
+}

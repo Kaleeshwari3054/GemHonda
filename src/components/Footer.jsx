@@ -40,8 +40,8 @@ const Footer = () => {
           <div className="footer-bottom">
             <p>© 2025 Honda Motorcycle and Scooter India Pvt. Ltd. All Rights Reserved.</p>
             <p>
-              For Assistance: <a href="tel:18001033434">1800 103 3434</a> | 
-              Email: <a href="mailto:customercare@honda.hmsi.in">customercare@honda.hmsi.in</a>
+              For Assistance: <a href="tel:+917299999733">+91 72999 99733</a> |
+              Email: <a href="mailto:customercare@honda.hmsi.in"> thegemhonda@gmail.com</a>
             </p>
           </div>
         </div>

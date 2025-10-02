@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import GoogleMap from "./pages/GoogleMap";
 import HomePage from "./pages/HomePage";
 // import RideCards from "./pages/RideCards";
 // import ImageCarousel from "./pages/ImageCarousel";
@@ -44,6 +44,7 @@ function App() {
               {/* <CommunityCarousel /> */}
               <GoogleRevies />
               <FounderSection/>
+              <GoogleMap/>
             </>
           }
         />

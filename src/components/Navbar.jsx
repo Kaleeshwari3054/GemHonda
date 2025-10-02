@@ -101,6 +101,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Navbar.css';
+import Logo from '../assets/GemHondaLogo.png'
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -123,7 +124,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-logo">HONDA</Link>
+      <Link to="/" className="navbar-logo">
+        <img src={Logo} alt="Honda Logo" className="logo" />
+      </Link>
 
       <ul className={`navbar-links ${mobileMenuOpen ? 'active' : ''}`}>
         {/* SALES */}

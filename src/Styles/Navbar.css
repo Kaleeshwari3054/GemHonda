@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Default hidden */
 .dropdown-menu {
   display: none;
@@ -26,7 +27,8 @@
 }
 
 .navbar-links.active {
-  display: block; /* For mobile toggle */
+  display: block;
+  /* For mobile toggle */
 }
 
 .dropdown-toggle {
@@ -37,31 +39,37 @@
 .navbar {
   position: fixed;
   top: 0;
+  padding-left: 20px !important;
+  padding-right: 60px !important;
   width: 100%;
-  height: 70px;
+  height: 100px;
   background: linear-gradient(90deg, #fff 70%, #f9f9f9 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar-logo {
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: #e60012; /* Honda red */
+  height: 100px;
   text-decoration: none;
   letter-spacing: 2px;
-  font-family: 'Segoe UI', sans-serif;
   transition: transform 0.3s ease;
 }
 
+.logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* 
 .navbar-logo:hover {
   transform: scale(1.05);
-}
+} */
 
 .navbar-links {
   list-style: none;
@@ -189,7 +197,7 @@
     gap: 20px;
     padding: 30px 20px;
     transition: left 0.35s ease;
-    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15);
   }
 
   .navbar-links.active {
