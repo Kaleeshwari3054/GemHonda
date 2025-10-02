@@ -390,3 +390,157 @@
 .value-item:nth-child(4) {
   animation-delay: 0.3s;
 }
+
+/* Company Location Styles */
+.company-location {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.company-location h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.location-info {
+  text-align: left;
+}
+
+.company-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.company-logo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #d50000;
+  box-shadow: 0 10px 30px rgba(213, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.company-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(213, 0, 0, 0.4);
+}
+
+.contact-details h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #d50000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-details p i {
+  color: #d50000;
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+}
+
+.google-map {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+}
+
+.google-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(10%);
+  transition: filter 0.3s ease;
+}
+
+.google-map:hover iframe {
+  filter: grayscale(0%);
+}
+
+/* Map overlay for better styling */
+.google-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(213,0,0,0.1), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive Design for Location */
+@media (max-width: 768px) {
+  .location-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .location-info {
+    text-align: center;
+  }
+  
+  .contact-details p {
+    justify-content: center;
+  }
+  
+  .company-location h3 {
+    font-size: 1.8rem;
+  }
+  
+  .company-logo img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .google-map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-details p {
+    font-size: 0.9rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-details p i {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .google-map {
+    height: 250px;
+  }
+  
+  .company-logo img {
+    width: 100px;
+    height: 100px;
+  }
+}

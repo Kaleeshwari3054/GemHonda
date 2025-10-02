@@ -31,6 +31,85 @@
   }
 }
 
+/* 360° View Styles */
+.bike-image-container {
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.bike-image-wrapper {
+  display: inline-block;
+  position: relative;
+  transition: transform 0.1s ease-out;
+  perspective: 1000px;
+}
+
+.bike-image-wrapper.view-360 {
+  transform-style: preserve-3d;
+}
+
+.view-360-indicator {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(213, 0, 0, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.bike-image-wrapper.view-360:hover .view-360-indicator {
+  opacity: 1;
+}
+
+/* Enhanced 360° viewer styles */
+.scooter-360-viewer {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.scooter-360-viewer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+}
+
+/* Color picker enhancements */
+.color-picker {
+  margin-top: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+}
+
+.color-picker h3 {
+  color: #d50000;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.color-picker div[style*="display: flex"] {
+  justify-content: center;
+  align-items: center;
+}
+
+.color-picker div[style*="position: relative"]:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
 
 
@@ -79,6 +158,17 @@
 .bike-details {
   color: black;
   font-weight: 600;
+}
+
+.bike-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #d50000;
 }
 
 /* Image */
