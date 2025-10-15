@@ -54,10 +54,9 @@ import React from "react";
 import "../Styles/GoogleMap.css";
 import logo from "../assets/GemHondaLogo.png";
 
-// Center coordinates (Gem Honda) and zoom level
-const LAT = 13.035804990788547;
-const LNG = 80.20840731482213;
-const ZOOM = 18; // 16-19 are typically good; increase for closer zoom
+const LAT = 13.035805;
+const LNG = 80.208407;
+const ZOOM = 18;
 
 const GoogleMap = () => {
   const mapSrc = `https://maps.google.com/maps?q=${LAT},${LNG}&z=${ZOOM}&output=embed`;
@@ -66,60 +65,45 @@ const GoogleMap = () => {
   return (
     <section className="google-map-section">
       <div className="container">
-        <h2 className="section-title">Visit Our Showroom</h2>
-
-        <div className="map-wrapper">
-          {/* LEFT: Showroom info card */}
-          <aside className="info-card">
-            <div className="logo-container">
-              <img src={logo} alt="Gem Honda Logo" />
-            </div>
-
-            <div className="contact-info">
-              <h3>Gem Honda</h3>
-              <p className="address">
-                📍 2/9 Yaathaval Street, Virugambakkam, Chennai, Tamil Nadu
-                600092
-              </p>
+        <h2 className="section-title text-center mb-4">Visit Our Showroom</h2>
+        <div className="row">
+          {/* Info Card */}
+          <div className="col-lg-4 mb-4 mb-lg-0">
+            <div className="card p-3 shadow-sm">
+              <img src={logo} alt="Gem Honda" className="img-fluid mb-3" />
+              <h5>Gem Honda</h5>
+              <p>📍 2/9 Yaathaval Street, Virugambakkam, Chennai, TN 600092</p>
               <p>
-                📞 <a href="tel:+919094320000">+91 97299 99733</a>
+                📞 <a href="tel:+919094320000">+91 9094320000</a>
               </p>
               <p>
                 ✉️{" "}
                 <a href="mailto:thegemhonda@gmail.com">thegemhonda@gmail.com</a>
               </p>
               <p>⏰ Mon - Sat: 9:00 AM - 7:00 PM</p>
-
-              <div className="map-utilities">
-                <a
-                  className="maps-link"
-                  href={openMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Open in Google Maps
-                </a>
-              </div>
+              <a
+                href={openMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn mt-2"
+                style={{ backgroundColor: "hsl(0, 73%, 41%)", color: "#fff" }}
+              >
+                Open in Google Maps
+              </a>
             </div>
-          </aside>
+          </div>
 
-          {/* RIGHT: Map */}
-          <div className="map-container">
+          {/* Map */}
+          <div className="col-lg-8">
             <iframe
-              title="Gem Honda Location"
-              src="https://www.google.com/maps?q=13.041493,80.199688+(Gem+Honda)&z=18&output=embed"
+              title="Sri Devi Karumari Cinemas Location"
+              src="https://www.google.com/maps?q=13.049656,80.193422+(Sri+Devi+Karumari+Cinemas)&z=18&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, borderRadius: "10px" }}
               allowFullScreen
               loading="lazy"
             ></iframe>
-
-            {/* Non-interactive visual red pin overlay to emphasize the location */}
-            <div className="pin" aria-hidden="true">
-              <span className="stick" />
-              <span className="dot" />
-            </div>
           </div>
         </div>
       </div>

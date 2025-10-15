@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles/PickBikeSection.css';
+import '../Styles/pickBikeSection.css';
 
 const PickBikeSection = () => {
   const vehicles = [

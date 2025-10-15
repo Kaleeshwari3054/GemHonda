@@ -86,7 +86,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
 import Footer from "./components/Footer";
-import GoogleMap from "./pages/GoogleMap";
+// import GoogleMap from "./pages/GoogleMap";
 import HomePage from "./pages/HomePage";
 import PickBikeSection from "./pages/PickBikeSection";
 // import RideCards from "./pages/RideCards";
@@ -129,7 +129,7 @@ function App() {
                 <PickBikeSection />
                 {/* <GoogleRevies /> */}
                 <FounderSection />
-                <GoogleMap />
+                {/* <GoogleMap /> */}
               </>
             }
           />
