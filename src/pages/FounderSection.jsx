@@ -16,7 +16,7 @@ const FounderSection = () => {
             <div className="leader-card manager-card">
               <div className="leader-image">
                 <img 
-                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1" 
+                  src="https://toppng.com/uploads/preview/male-user-filled-icon-man-icon-115533970576b3erfsss1.png" 
                   alt="General Manager"
                   className="img-fluid"
                 />
@@ -55,7 +55,7 @@ const FounderSection = () => {
             <div className="leader-card employee-card">
               <div className="leader-image">
                 <img 
-                  src="https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=1" 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3XV7bulO2QPx4IdxpkPMdVnHdW7zlx5qdlA&s" 
                   alt="Employee of the Month"
                   className="img-fluid"
                 />

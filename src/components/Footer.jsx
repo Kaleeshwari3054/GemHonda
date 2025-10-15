@@ -38,7 +38,7 @@ const Footer = () => {
 
           {/* Footer Bottom */}
           <div className="footer-bottom">
-            <p>© 2025 Honda Motorcycle and Scooter India Pvt. Ltd. All Rights Reserved.</p>
+            <p>© 2025 Gem Honda Motorcycle and Scooter India Pvt. Ltd. All Rights Reserved.</p>
             <p>
               For Assistance: <a href="tel:+917299999733">+91 72999 99733</a> |
               Email: <a href="mailto:customercare@honda.hmsi.in"> thegemhonda@gmail.com</a>

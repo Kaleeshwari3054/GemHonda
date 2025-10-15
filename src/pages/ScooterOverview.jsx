@@ -1,99 +1,230 @@
+// // // // // // src/components/ScooterOverview.jsx
+// // // // // import React from "react";
+// // // // // import { Link, useLocation } from "react-router-dom";
+// // // // // import "../Styles/ScooterOverview.css";
+
+// // // // // const ScooterOverview = () => {
+// // // // //   const location = useLocation();
+// // // // //   const scooter = location.state?.scooter;
+
+// // // // //   // If no data was passed, show a fallback
+// // // // //   if (!scooter) {
+// // // // //     return <p>No scooter selected. Please go back and choose one.</p>;
+// // // // //   }
+
+// // // // //   return (
+// // // // //     <div className="scooter-overview-container">
+// // // // //       {/* Tabs */}
+// // // // //       <div className="scooter-tabs">
+// // // // //         <span className="active">Overview</span>
+// // // // //         <Link to="/scooter-colours-container">Colours</Link>
+// // // // //       </div>
+
+// // // // //       {/* Overview Section */}
+// // // // //       <div className="scooter-content">
+// // // // //         <div className="scooter-image">
+// // // // //           <img src={scooter.image} alt={scooter.name} />
+// // // // //         </div>
+// // // // //         <div className="scooter-details">
+// // // // //           <h2>{scooter.name}</h2>
+// // // // //           <p className="price">
+// // // // //             {scooter.price} <span>{scooter.priceNote}</span>
+// // // // //           </p>
+// // // // //           <p className="description">{scooter.description}</p>
+
+// // // // //         </div>
+// // // // //       </div>
+
+// // // // //       {/* 🚀 Price Table */}
+// // // // //      <div className="price-list">
+// // // // //   <h3>Price Table</h3>
+// // // // //   <table>
+// // // // //     <thead>
+// // // // //       <tr>
+// // // // //         <th>Variant</th>
+// // // // //         <th>STD</th>
+// // // // //         <th>DLX</th>
+// // // // //         <th>H SMART</th>
+// // // // //       </tr>
+// // // // //     </thead>
+// // // // //     <tbody>
+// // // // //       <tr>
+// // // // //         <td>Ex-Showroom</td>
+// // // // //         <td>{scooter.price}</td>
+// // // // //         <td>₹95,864</td>
+// // // // //         <td>₹98,865</td>
+// // // // //       </tr>
+// // // // //       <tr>
+// // // // //         <td>Insurance</td>
+// // // // //         <td>₹6,809</td>
+// // // // //         <td>₹6,930</td>
+// // // // //         <td>₹6,965</td>
+// // // // //       </tr>
+// // // // //       <tr>
+// // // // //         <td>Road Tax</td>
+// // // // //         <td>₹11,734</td>
+// // // // //         <td>₹12,786</td>
+// // // // //         <td>₹13,087</td>
+// // // // //       </tr>
+// // // // //       <tr className="highlight">
+// // // // //         <td>On Road</td>
+// // // // //         <td>₹1,03,887</td>
+// // // // //         <td>₹1,15,580</td>
+// // // // //         <td>₹1,18,917</td>
+// // // // //       </tr>
+// // // // //       <tr>
+// // // // //         <td>Accessories</td>
+// // // // //         <td>₹4,980</td>
+// // // // //         <td>₹4,980</td>
+// // // // //         <td>₹4,980</td>
+// // // // //       </tr>
+// // // // //       <tr>
+// // // // //         <td>Regt & Handling</td>
+// // // // //         <td>₹1,985</td>
+// // // // //         <td>₹1,985</td>
+// // // // //         <td>₹1,985</td>
+// // // // //       </tr>
+// // // // //       {/* <tr className="total-row">
+// // // // //         <td>Total Amount</td>
+// // // // //         <td>₹1,10,852</td>
+// // // // //         <td>₹1,22,545</td>
+// // // // //         <td>₹1,25,882</td>
+// // // // //       </tr> */}
+// // // // //     </tbody>
+// // // // //   </table>
+// // // // // </div>
+
+// // // // //     </div>
+// // // // //   );
+// // // // // };
+
+// // // // // export default ScooterOverview;
+
 // // // // // src/components/ScooterOverview.jsx
-// // // // import React from "react";
-// // // // import { Link, useLocation } from "react-router-dom";
+// // // // import React, { useState } from "react";
+// // // // import { useLocation } from "react-router-dom";
 // // // // import "../Styles/ScooterOverview.css";
+
+// // // // import Scooter1 from "../assets/scooter images/Scooter1.jpeg";
+// // // // import Scooter2 from "../assets/scooter images/Scooter2.jpeg";
+// // // // import Scooter3 from "../assets/scooter images/Scooter3.jpeg";
+// // // // import Scooter4 from "../assets/scooter images/Scooter4.jpeg";
+// // // // import Scooter5 from "../assets/scooter images/Scooter5.jpeg";
+// // // // import Scooter6 from "../assets/scooter images/Scooter6.jpeg";
 
 // // // // const ScooterOverview = () => {
 // // // //   const location = useLocation();
 // // // //   const scooter = location.state?.scooter;
 
-// // // //   // If no data was passed, show a fallback
+// // // //   // Fallback
 // // // //   if (!scooter) {
 // // // //     return <p>No scooter selected. Please go back and choose one.</p>;
 // // // //   }
 
+// // // //   // 🎨 Colours (moved here from ScooterColours.jsx)
+// // // //   const colours = [
+// // // //     { name: "navy blue", hex: "rgb(12, 20, 32)", image: Scooter1 },
+// // // //     { name: "Dark Red / Maroon", hex: "rgb(104, 30, 33)", image: Scooter2 },
+// // // //     {
+// // // //       name: "Strontium Silver Metallic & Igneous Black",
+// // // //       hex: "#2B2B2B",
+// // // //       image: Scooter3,
+// // // //     },
+// // // //     { name: "Deep Blue Metallic", hex: "rgb(17, 67, 113)", image: Scooter4 },
+// // // //     { name: "Silver Metallic", hex: "#BBBBBB", image: Scooter5 },
+// // // //     { name: "Glossy Black", hex: "#000000", image: Scooter6 },
+// // // //   ];
+
+// // // //   const [selectedColour, setSelectedColour] = useState(colours[0]);
+
 // // // //   return (
 // // // //     <div className="scooter-overview-container">
-// // // //       {/* Tabs */}
-// // // //       <div className="scooter-tabs">
-// // // //         <span className="active">Overview</span>
-// // // //         <Link to="/scooter-colours-container">Colours</Link>
+// // // //       {/* Bike Name */}
+// // // //       <h2 className="scooter-title">{scooter.name}</h2>
+
+// // // // <div className="scooter-content">
+// // // //   {/* Left Image */}
+// // // //   <div className="scooter-image">
+// // // //     <img src={selectedColour.image} alt={selectedColour.name} />
+// // // //   </div>
+
+// // // //   {/* Right Details */}
+// // // //   <div className="scooter-details">
+// // // //     <p className="scooter-description">{scooter.description}</p>
+
+// // // //     {/* Colours */}
+// // // //     <div className="scooter-colours-container">
+// // // //       <h3>Available Colours</h3>
+// // // //       <div className="colour-palette">
+// // // //         {colours.map((colour, idx) => (
+// // // //           <div
+// // // //             key={idx}
+// // // //             className={`colour-swatch ${
+// // // //               selectedColour.name === colour.name ? "active" : ""
+// // // //             }`}
+// // // //             style={{ backgroundColor: colour.hex }}
+// // // //             onClick={() => setSelectedColour(colour)}
+// // // //           />
+// // // //         ))}
 // // // //       </div>
-
-// // // //       {/* Overview Section */}
-// // // //       <div className="scooter-content">
-// // // //         <div className="scooter-image">
-// // // //           <img src={scooter.image} alt={scooter.name} />
-// // // //         </div>
-// // // //         <div className="scooter-details">
-// // // //           <h2>{scooter.name}</h2>
-// // // //           <p className="price">
-// // // //             {scooter.price} <span>{scooter.priceNote}</span>
-// // // //           </p>
-// // // //           <p className="description">{scooter.description}</p>
-
-// // // //         </div>
-// // // //       </div>
-
-// // // //       {/* 🚀 Price Table */}
-// // // //      <div className="price-list">
-// // // //   <h3>Price Table</h3>
-// // // //   <table>
-// // // //     <thead>
-// // // //       <tr>
-// // // //         <th>Variant</th>
-// // // //         <th>STD</th>
-// // // //         <th>DLX</th>
-// // // //         <th>H SMART</th>
-// // // //       </tr>
-// // // //     </thead>
-// // // //     <tbody>
-// // // //       <tr>
-// // // //         <td>Ex-Showroom</td>
-// // // //         <td>{scooter.price}</td>
-// // // //         <td>₹95,864</td>
-// // // //         <td>₹98,865</td>
-// // // //       </tr>
-// // // //       <tr>
-// // // //         <td>Insurance</td>
-// // // //         <td>₹6,809</td>
-// // // //         <td>₹6,930</td>
-// // // //         <td>₹6,965</td>
-// // // //       </tr>
-// // // //       <tr>
-// // // //         <td>Road Tax</td>
-// // // //         <td>₹11,734</td>
-// // // //         <td>₹12,786</td>
-// // // //         <td>₹13,087</td>
-// // // //       </tr>
-// // // //       <tr className="highlight">
-// // // //         <td>On Road</td>
-// // // //         <td>₹1,03,887</td>
-// // // //         <td>₹1,15,580</td>
-// // // //         <td>₹1,18,917</td>
-// // // //       </tr>
-// // // //       <tr>
-// // // //         <td>Accessories</td>
-// // // //         <td>₹4,980</td>
-// // // //         <td>₹4,980</td>
-// // // //         <td>₹4,980</td>
-// // // //       </tr>
-// // // //       <tr>
-// // // //         <td>Regt & Handling</td>
-// // // //         <td>₹1,985</td>
-// // // //         <td>₹1,985</td>
-// // // //         <td>₹1,985</td>
-// // // //       </tr>
-// // // //       {/* <tr className="total-row">
-// // // //         <td>Total Amount</td>
-// // // //         <td>₹1,10,852</td>
-// // // //         <td>₹1,22,545</td>
-// // // //         <td>₹1,25,882</td>
-// // // //       </tr> */}
-// // // //     </tbody>
-// // // //   </table>
+// // // //       <p className="selected-colour">Color: {selectedColour.name}</p>
+// // // //     </div>
+// // // //   </div>
 // // // // </div>
 
+// // // //       {/* Price Table */}
+// // // //       <div className="price-list">
+// // // //         <h3>Price Table</h3>
+// // // //         {/* ... existing table ... */}
+// // // //         <table>
+// // // //           <thead>
+// // // //             <tr>
+// // // //               <th>Variant</th>
+// // // //               <th>STD</th>
+// // // //               <th>DLX</th>
+// // // //               <th>H SMART</th>
+// // // //             </tr>
+// // // //           </thead>
+// // // //           <tbody>
+// // // //             <tr>
+// // // //               <td>Ex-Showroom</td>
+// // // //               <td>{scooter.price}</td>
+// // // //               <td>₹95,864</td>
+// // // //               <td>₹98,865</td>
+// // // //             </tr>
+// // // //             <tr>
+// // // //               <td>Insurance</td>
+// // // //               <td>₹6,809</td>
+// // // //               <td>₹6,930</td>
+// // // //               <td>₹6,965</td>
+// // // //             </tr>
+// // // //             <tr>
+// // // //               <td>Road Tax</td>
+// // // //               <td>₹11,734</td>
+// // // //               <td>₹12,786</td>
+// // // //               <td>₹13,087</td>
+// // // //             </tr>
+// // // //             <tr className="highlight">
+// // // //               <td>On Road</td>
+// // // //               <td>₹1,03,887</td>
+// // // //               <td>₹1,15,580</td>
+// // // //               <td>₹1,18,917</td>
+// // // //             </tr>
+// // // //             <tr>
+// // // //               <td>Accessories</td>
+// // // //               <td>₹4,980</td>
+// // // //               <td>₹4,980</td>
+// // // //               <td>₹4,980</td>
+// // // //             </tr>
+// // // //             <tr>
+// // // //               <td>Regt & Handling</td>
+// // // //               <td>₹1,985</td>
+// // // //               <td>₹1,985</td>
+// // // //               <td>₹1,985</td>
+// // // //             </tr>
+// // // //           </tbody>
+// // // //         </table>
+// // // //       </div>
 // // // //     </div>
 // // // //   );
 // // // // };
@@ -105,6 +236,7 @@
 // // // import { useLocation } from "react-router-dom";
 // // // import "../Styles/ScooterOverview.css";
 
+// // // // 🎨 Import local colour images
 // // // import Scooter1 from "../assets/scooter images/Scooter1.jpeg";
 // // // import Scooter2 from "../assets/scooter images/Scooter2.jpeg";
 // // // import Scooter3 from "../assets/scooter images/Scooter3.jpeg";
@@ -116,14 +248,14 @@
 // // //   const location = useLocation();
 // // //   const scooter = location.state?.scooter;
 
-// // //   // Fallback
+// // //   // 🔙 Fallback if no scooter passed
 // // //   if (!scooter) {
 // // //     return <p>No scooter selected. Please go back and choose one.</p>;
 // // //   }
 
-// // //   // 🎨 Colours (moved here from ScooterColours.jsx)
+// // //   // 🎨 Colours for this scooter
 // // //   const colours = [
-// // //     { name: "navy blue", hex: "rgb(12, 20, 32)", image: Scooter1 },
+// // //     { name: "Navy Blue", hex: "rgb(12, 20, 32)", image: Scooter1 },
 // // //     { name: "Dark Red / Maroon", hex: "rgb(104, 30, 33)", image: Scooter2 },
 // // //     {
 // // //       name: "Strontium Silver Metallic & Igneous Black",
@@ -139,50 +271,50 @@
 
 // // //   return (
 // // //     <div className="scooter-overview-container">
-// // //       {/* Bike Name */}
+// // //       {/* 🚀 Title */}
 // // //       <h2 className="scooter-title">{scooter.name}</h2>
 
-// // // <div className="scooter-content">
-// // //   {/* Left Image */}
-// // //   <div className="scooter-image">
-// // //     <img src={selectedColour.image} alt={selectedColour.name} />
-// // //   </div>
+// // //       <div className="scooter-content">
+// // //         {/* Left: Image */}
+// // //         <div className="scooter-image">
+// // //           <img src={selectedColour.image} alt={selectedColour.name} />
+// // //         </div>
 
-// // //   {/* Right Details */}
-// // //   <div className="scooter-details">
-// // //     <p className="scooter-description">{scooter.description}</p>
+// // //         {/* Right: Details */}
+// // //         <div className="scooter-details">
+// // //           <p className="scooter-description">{scooter.description}</p>
 
-// // //     {/* Colours */}
-// // //     <div className="scooter-colours-container">
-// // //       <h3>Available Colours</h3>
-// // //       <div className="colour-palette">
-// // //         {colours.map((colour, idx) => (
-// // //           <div
-// // //             key={idx}
-// // //             className={`colour-swatch ${
-// // //               selectedColour.name === colour.name ? "active" : ""
-// // //             }`}
-// // //             style={{ backgroundColor: colour.hex }}
-// // //             onClick={() => setSelectedColour(colour)}
-// // //           />
-// // //         ))}
+// // //           {/* 🎨 Colour Selector */}
+// // //           <div className="scooter-colours-container">
+// // //             <h3>Available Colours</h3>
+// // //             <div className="colour-palette">
+// // //               {colours.map((colour, idx) => (
+// // //                 <div
+// // //                   key={idx}
+// // //                   className={`colour-swatch ${
+// // //                     selectedColour.name === colour.name ? "active" : ""
+// // //                   }`}
+// // //                   style={{ backgroundColor: colour.hex }}
+// // //                   onClick={() => setSelectedColour(colour)}
+// // //                   title={colour.name}
+// // //                 />
+// // //               ))}
+// // //             </div>
+// // //             <p className="selected-colour">Selected: {selectedColour.name}</p>
+// // //           </div>
+// // //         </div>
 // // //       </div>
-// // //       <p className="selected-colour">Color: {selectedColour.name}</p>
-// // //     </div>
-// // //   </div>
-// // // </div>
 
-// // //       {/* Price Table */}
+// // //       {/* 💰 Price Table */}
 // // //       <div className="price-list">
 // // //         <h3>Price Table</h3>
-// // //         {/* ... existing table ... */}
 // // //         <table>
 // // //           <thead>
 // // //             <tr>
 // // //               <th>Variant</th>
 // // //               <th>STD</th>
 // // //               <th>DLX</th>
-// // //               <th>H SMART</th>
+// // //               <th>H-SMART</th>
 // // //             </tr>
 // // //           </thead>
 // // //           <tbody>
@@ -231,81 +363,323 @@
 
 // // // export default ScooterOverview;
 
-// // // src/components/ScooterOverview.jsx
-// // import React, { useState } from "react";
-// // import { useLocation } from "react-router-dom";
-// // import "../Styles/ScooterOverview.css";
+// // // // src/components/ScooterDetails.jsx
+// // // import React, { useState } from "react";
+// // // import { useLocation } from "react-router-dom";
+// // // import "../Styles/BikeDetails.css"; // ✅ Reuse same styles
 
-// // // 🎨 Import local colour images
-// // import Scooter1 from "../assets/scooter images/Scooter1.jpeg";
-// // import Scooter2 from "../assets/scooter images/Scooter2.jpeg";
-// // import Scooter3 from "../assets/scooter images/Scooter3.jpeg";
-// // import Scooter4 from "../assets/scooter images/Scooter4.jpeg";
-// // import Scooter5 from "../assets/scooter images/Scooter5.jpeg";
-// // import Scooter6 from "../assets/scooter images/Scooter6.jpeg";
+// // // // 🎨 Import local colour images
+// // // import Scooter1 from "../assets/scooter images/Scooter1.jpeg";
+// // // import Scooter2 from "../assets/scooter images/Scooter2.jpeg";
+// // // import Scooter3 from "../assets/scooter images/Scooter3.jpeg";
+// // // import Scooter4 from "../assets/scooter images/Scooter4.jpeg";
+// // // import Scooter5 from "../assets/scooter images/Scooter5.jpeg";
+// // // import Scooter6 from "../assets/scooter images/Scooter6.jpeg";
+
+// // // const ScooterDetails = () => {
+// // //   const location = useLocation();
+// // //   const { scooter } = location.state || {}; // get scooter from navigation
+
+// // //   if (!scooter) {
+// // //     return <p>No scooter selected. Please go back and choose one.</p>;
+// // //   }
+
+// // //   // 🎨 Available colours
+// // //   const colors = [
+// // //     { name: "Navy Blue", image: Scooter1 },
+// // //     { name: "Dark Red", image: Scooter2 },
+// // //     { name: "Silver + Black", image: Scooter3 },
+// // //     { name: "Deep Blue", image: Scooter4 },
+// // //     { name: "Silver Metallic", image: Scooter5 },
+// // //     { name: "Glossy Black", image: Scooter6 },
+// // //   ];
+
+// // //   const [selectedImage, setSelectedImage] = useState(colors[0].image);
+
+// // //   return (
+// // //     <>
+// // //       <div className="bike-details-container">
+// // //         <h1>{scooter.name}</h1>
+
+// // //         {/* Main Image */}
+// // //         <img
+// // //           src={selectedImage}
+// // //           alt={scooter.name}
+// // //           className="bike-main-image"
+// // //         />
+
+// // //         {/* Price */}
+// // //         <h1 className="bike-price">
+// // //           Price: <span className="bike-details">{scooter.price}</span>
+// // //         </h1>
+
+// // //         {/* Description */}
+// // //         <h1 className="bike-price">
+// // //           Description:{" "}
+// // //           <span className="bike-details">{scooter.description}</span>
+// // //         </h1>
+
+// // //         {/* Colour Picker */}
+// // //         <div className="color-picker">
+// // //           <h3>Choose Color:</h3>
+// // //           {colors.map((color, index) => (
+// // //             <button
+// // //               key={index}
+// // //               onClick={() => setSelectedImage(color.image)}
+// // //               style={{
+// // //                 background: `url(${color.image}) center/cover no-repeat`,
+// // //                 width: "40px",
+// // //                 height: "40px",
+// // //                 margin: "5px",
+// // //                 border: selectedImage === color.image ? "2px solid #000" : "2px solid #ccc",
+// // //                 borderRadius: "50%",
+// // //                 cursor: "pointer",
+// // //               }}
+// // //               title={color.name}
+// // //             />
+// // //           ))}
+// // //         </div>
+// // //       </div>
+
+// // //       {/* Price Table */}
+// // //       <div className="price-list">
+// // //         <h3>Price Table</h3>
+// // //         <table>
+// // //           <thead>
+// // //             <tr>
+// // //               <th>Variant</th>
+// // //               <th>STD</th>
+// // //               <th>DLX</th>
+// // //               <th>H-SMART</th>
+// // //             </tr>
+// // //           </thead>
+// // //           <tbody>
+// // //             <tr>
+// // //               <td>Ex-Showroom</td>
+// // //               <td>{scooter.price}</td>
+// // //               <td>₹95,864</td>
+// // //               <td>₹98,865</td>
+// // //             </tr>
+// // //             <tr>
+// // //               <td>Insurance</td>
+// // //               <td>₹6,809</td>
+// // //               <td>₹6,930</td>
+// // //               <td>₹6,965</td>
+// // //             </tr>
+// // //             <tr>
+// // //               <td>Road Tax</td>
+// // //               <td>₹11,734</td>
+// // //               <td>₹12,786</td>
+// // //               <td>₹13,087</td>
+// // //             </tr>
+// // //             <tr className="highlight">
+// // //               <td>On Road</td>
+// // //               <td>₹1,03,887</td>
+// // //               <td>₹1,15,580</td>
+// // //               <td>₹1,18,917</td>
+// // //             </tr>
+// // //             <tr>
+// // //               <td>Accessories</td>
+// // //               <td>₹4,980</td>
+// // //               <td>₹4,980</td>
+// // //               <td>₹4,980</td>
+// // //             </tr>
+// // //             <tr>
+// // //               <td>Regt & Handling</td>
+// // //               <td>₹1,985</td>
+// // //               <td>₹1,985</td>
+// // //               <td>₹1,985</td>
+// // //             </tr>
+// // //           </tbody>
+// // //         </table>
+// // //       </div>
+// // //     </>
+// // //   );
+// // // };
+
+// // // export default ScooterDetails;
+
+// // import React, { useState, useEffect } from "react";
+// // import { useLocation } from "react-router-dom";
+// // import "../Styles/BikeDetails.css";
+
+// // // import Activa125_1 from "../pages/scooters/activa125-MatAxisGrayMetallic.png";
+// // // import Activa125_2 from "../pages/scooters/activa125-PearlDeepGroundGray.png";
+// // // import Activa125_3 from "../pages/scooters/activa125-PearlIgneousBlack.png";
+// // // import Activa125_4 from "../pages/scooters/activa125-PearlPreciousWhite.png";
+// // // import Activa125_5 from "../pages/scooters/activa125-PearlSirenBlue.png";
+// // // import Activa125_6 from "../pages/scooters/activa125-RebelRedMetallic.png";
+
+// // // import Activa110_1 from "../pages/scooters/activa110-DecentBlueMetallic.png";
+// // // import Activa110_2 from "../pages/scooters/activa110-MatAxisGrayMetallic.png";
+// // // import Activa110_3 from "../pages/scooters/activa110-PearlIgneousBlack.png";
+// // // import Activa110_4 from "../pages/scooters/activa110-PearlPreciousWhite.png";
+// // // import Activa110_5 from "../pages/scooters/activa110-PearlSirenBlue.png";
+// // // import Activa110_6 from "../pages/scooters/activa110-RebelRedMetallic.png";
+
+// // // import Dio125_1 from "../pages/scooters/dio125-ImperialRed.png";
+// // // import Dio125_2 from "../pages/scooters/dio125-MatMarvelBlueMetallic.png";
+// // // import Dio125_3 from "../pages/scooters/dio125-PearlDeepGroundGray(Emblem).png";
+// // // import Dio125_4 from "../pages/scooters/dio125-PearlDeepGroundGray(Stripe).png";
+// // // import Dio125_5 from "../pages/scooters/dio125-PearlIgneousBlack.png";
+// // // import Dio125_6 from "../pages/scooters/dio125-PearlSportsYellow.png";
+
+// // // import Dio110_1 from "../pages/scooters/dio110-ImperialRedMetallic​.png";
+// // // import Dio110_2 from "../pages/scooters/dio110-MatAxisGrayMetallic.png";
+// // // import Dio110_3 from "../pages/scooters/dio110-MatMarvelBlue.png";
+// // // import Dio110_4 from "../pages/scooters/dio110-PearlIgneousBlack+PearlDeepGroundGray.png";
+// // // import Dio110_5 from "../pages/scooters/dio110-PearlIgneousBlack.png";
+
+// // import Activa125_1 from "../assets/scooter images/scooters/activa125-MatAxisGrayMetallic.png";
+// // import Activa125_2 from "../assets/scooter images/scooters/activa125-PearlDeepGroundGray.png";
+// // import Activa125_3 from "../assets/scooter images/scooters/activa125-PearlIgneousBlack.png";
+// // import Activa125_4 from "../assets/scooter images/scooters/activa125-PearlPreciousWhite.png";
+// // import Activa125_5 from "../assets/scooter images/scooters/activa125-PearlSirenBlue.png";
+// // import Activa125_6 from "../assets/scooter images/scooters/activa125-RebelRedMetallic.png";
+
+// // import Activa110_1 from "../assets/scooter images/scooters/activa110-DecentBlueMetallic.png";
+// // import Activa110_2 from "../assets/scooter images/scooters/Activa110-MatAxisGrayMetallic.png";
+// // import Activa110_3 from "../assets/scooter images/scooters/activa110-PearlIgneousBlack.png";
+// // import Activa110_4 from "../assets/scooter images/scooters/activa110-PearlPreciousWhite.png";
+// // import Activa110_5 from "../assets/scooter images/scooters/activa110-PearlSirenBlue.png";
+// // import Activa110_6 from "../assets/scooter images/scooters/activa110-RebelRedMetallic.png";
+
+// // import Dio125_1 from "../assets/scooter images/scooters/dio125-ImperialRed.png";
+// // import Dio125_2 from "../assets/scooter images/scooters/dio125-MatMarvelBlueMetallic.png";
+// // import Dio125_3 from "../assets/scooter images/scooters/dio125-PearlDeepGroundGray_Emblem.png";
+// // import Dio125_4 from "../assets/scooter images/scooters/dio125-PearlDeepGroundGray_Stripe.png";
+// // import Dio125_5 from "../assets/scooter images/scooters/dio125-PearlIgneousBlack.png";
+// // import Dio125_6 from "../assets/scooter images/scooters/dio125-PearlSportsYellow.png";
+
+// // import Dio110_1 from "../assets/scooter images/scooters/dio110-ImperialRedMetallic​.png";
+// // import Dio110_2 from "../assets/scooter images/scooters/dio110-MatAxisGrayMetallic.png";
+// // import Dio110_3 from "../assets/scooter images/scooters/dio110-MatMarvelBlue.png";
+// // import Dio110_4 from "../assets/scooter images/scooters/dio110-PearlIgneousBlack.png";
+// // import Dio110_5 from "../assets/scooter images/scooters/dio110-PearlIgneousBlack+PearlDeepGroundGray.png";
 
 // // const ScooterOverview = () => {
 // //   const location = useLocation();
-// //   const scooter = location.state?.scooter;
+// //   const { scooter } = location.state || {};
 
-// //   // 🔙 Fallback if no scooter passed
-// //   if (!scooter) {
-// //     return <p>No scooter selected. Please go back and choose one.</p>;
+// //   if (!scooter) return <p>No scooter selected. Please go back and choose one.</p>;
+
+// //   let colors = [];
+
+// //   if (scooter.name === "Activa 125") {
+// //     colors = [
+// //       { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa125_1, is360: true },
+// //       { name: "Pearl Deep Ground Gray", code: "#444444", image: Activa125_2 },
+// //       { name: "Pearl Igneous Black", code: "#000000", image: Activa125_3 },
+// //       { name: "Pearl Precious White", code: "#ffffff", image: Activa125_4 },
+// //       { name: "Pearl Siren Blue", code: "#1e3a8a", image: Activa125_5 },
+// //       { name: "Rebel Red Metallic", code: "#8b0000", image: Activa125_6 },
+// //     ];
+// //   }
+// //   else if (scooter.name === "Activa 110") {
+// //     colors = [
+// //       { name: "Decent Blue Metallic", code: "#1a2b8a", image: Activa110_1, is360: true },
+// //       { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa110_2 },
+// //       { name: "Pearl Igneous Black", code: "#000000", image: Activa110_3 },
+// //       { name: "Pearl Precious White", code: "#ffffff", image: Activa110_4 },
+// //       { name: "Pearl Siren Blue", code: "#1e40af", image: Activa110_5 },
+// //       { name: "Rebel Red Metallic", code: "#8b0000", image: Activa110_6 },
+// //     ];
+// //   } else if (scooter.name === "Dio 125") {
+// //     colors = [
+// //       { name: "Imperial Red", code: "#ff1b1b", image: Dio125_1, is360: true },
+// //       { name: "Mat Marvel Blue Metallic", code: "#1e3a8a", image: Dio125_2 },
+// //       { name: "Pearl Deep Ground Gray (Emblem)", code: "#444444", image: Dio125_3 },
+// //       { name: "Pearl Deep Ground Gray (Stripe)", code: "#555555", image: Dio125_4 },
+// //       { name: "Pearl Igneous Black", code: "#000000", image: Dio125_5 },
+// //       { name: "Pearl Sports Yellow", code: "#facc15", image: Dio125_6 },
+// //     ];
+// //   }
+// //   else if (scooter.name === "Dio 110") {
+// //     colors = [
+// //       { name: "Imperial Red Metallic", code: "#ff1b1b", image: Dio110_1, is360: true },
+// //       { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Dio110_2 },
+// //       { name: "Mat Marvel Blue", code: "#1e3a8a", image: Dio110_3 },
+// //       { name: "Pearl Igneous Black + Pearl Deep Ground Gray", code: "#333333", image: Dio110_4 },
+// //       { name: "Pearl Igneous Black", code: "#000000", image: Dio110_5 },
+// //     ];
 // //   }
 
-// //   // 🎨 Colours for this scooter
-// //   const colours = [
-// //     { name: "Navy Blue", hex: "rgb(12, 20, 32)", image: Scooter1 },
-// //     { name: "Dark Red / Maroon", hex: "rgb(104, 30, 33)", image: Scooter2 },
-// //     {
-// //       name: "Strontium Silver Metallic & Igneous Black",
-// //       hex: "#2B2B2B",
-// //       image: Scooter3,
-// //     },
-// //     { name: "Deep Blue Metallic", hex: "rgb(17, 67, 113)", image: Scooter4 },
-// //     { name: "Silver Metallic", hex: "#BBBBBB", image: Scooter5 },
-// //     { name: "Glossy Black", hex: "#000000", image: Scooter6 },
-// //   ];
+// //   // 🖼 Default selected color
+// //   const [selectedImage, setSelectedImage] = useState(colors[0].image);
+// //   const [selectedColorName, setSelectedColorName] = useState(colors[0].name);
+// //   const [animate, setAnimate] = useState(true);
 
-// //   const [selectedColour, setSelectedColour] = useState(colours[0]);
+// //   const handleColorChange = (color) => {
+// //     setAnimate(false);
+// //     setTimeout(() => {
+// //       setSelectedImage(color.image);
+// //       setSelectedColorName(color.name);
+// //       setAnimate(true);
+// //     }, 200);
+// //   };
 
 // //   return (
-// //     <div className="scooter-overview-container">
-// //       {/* 🚀 Title */}
-// //       <h2 className="scooter-title">{scooter.name}</h2>
+// //     <div className="bike-details-container">
+// //       <h1>{scooter.name}</h1>
 
-// //       <div className="scooter-content">
-// //         {/* Left: Image */}
-// //         <div className="scooter-image">
-// //           <img src={selectedColour.image} alt={selectedColour.name} />
-// //         </div>
-
-// //         {/* Right: Details */}
-// //         <div className="scooter-details">
-// //           <p className="scooter-description">{scooter.description}</p>
-
-// //           {/* 🎨 Colour Selector */}
-// //           <div className="scooter-colours-container">
-// //             <h3>Available Colours</h3>
-// //             <div className="colour-palette">
-// //               {colours.map((colour, idx) => (
-// //                 <div
-// //                   key={idx}
-// //                   className={`colour-swatch ${
-// //                     selectedColour.name === colour.name ? "active" : ""
-// //                   }`}
-// //                   style={{ backgroundColor: colour.hex }}
-// //                   onClick={() => setSelectedColour(colour)}
-// //                   title={colour.name}
-// //                 />
-// //               ))}
-// //             </div>
-// //             <p className="selected-colour">Selected: {selectedColour.name}</p>
-// //           </div>
-// //         </div>
+// //       {/* 🏍️ Image with rotation + fade animation */}
+// //       <div className={`bike-image-wrapper ${animate ? "fade-in" : ""}`}>
+// //         <img src={selectedImage} alt={scooter.name} className="bike-main-image spin-once" />
 // //       </div>
 
-// //       {/* 💰 Price Table */}
+// //       <h2>Price: <span>{scooter.price}</span></h2>
+
+// //       {/* 📝 Description */}
+// //       <p className="bike-description">{scooter.description}</p>
+
+// //       {/* Color Picker */}
+// //       <div className="color-picker">
+// //         <h3>Choose Color:</h3>
+// //         <div style={{ display: "flex", gap: "10px", marginTop: "10px", flexWrap: "wrap" }}>
+// //           {colors.map((color, index) => (
+// //             <div
+// //               key={index}
+// //               onClick={() => handleColorChange(color)}
+// //               style={{
+// //                 backgroundColor: color.code,
+// //                 width: "40px",
+// //                 height: "40px",
+// //                 borderRadius: "50%",
+// //                 border: selectedImage === color.image ? "3px solid #d50000" : "2px solid #ccc",
+// //                 cursor: "pointer",
+// //                 position: "relative",
+// //                 transition: "all 0.3s ease"
+// //               }}
+// //               title={color.name}
+// //             >
+// //               {color.is360 && (
+// //                 <div style={{
+// //                   position: "absolute",
+// //                   top: "-8px",
+// //                   right: "-8px",
+// //                   background: "#d50000",
+// //                   color: "white",
+// //                   borderRadius: "50%",
+// //                   width: "16px",
+// //                   height: "16px",
+// //                   fontSize: "10px",
+// //                   display: "flex",
+// //                   alignItems: "center",
+// //                   justifyContent: "center"
+// //                 }}>
+// //                   360°
+// //                 </div>
+// //               )}
+// //             </div>
+// //           ))}
+// //         </div>
+// //         <p style={{ marginTop: "10px" }}>
+// //           Selected Color: <strong>{selectedColorName}</strong>
+// //           {selectedColor.is360 && <span style={{ color: "#d50000", marginLeft: "10px" }}>✨ 360° View Available</span>}
+// //         </p>
+// //       </div>
+
+// //       {/* Price Table */}
 // //       <div className="price-list">
 // //         <h3>Price Table</h3>
 // //         <table>
@@ -363,172 +737,9 @@
 
 // // export default ScooterOverview;
 
-// // // src/components/ScooterDetails.jsx
-// // import React, { useState } from "react";
-// // import { useLocation } from "react-router-dom";
-// // import "../Styles/BikeDetails.css"; // ✅ Reuse same styles
-
-// // // 🎨 Import local colour images
-// // import Scooter1 from "../assets/scooter images/Scooter1.jpeg";
-// // import Scooter2 from "../assets/scooter images/Scooter2.jpeg";
-// // import Scooter3 from "../assets/scooter images/Scooter3.jpeg";
-// // import Scooter4 from "../assets/scooter images/Scooter4.jpeg";
-// // import Scooter5 from "../assets/scooter images/Scooter5.jpeg";
-// // import Scooter6 from "../assets/scooter images/Scooter6.jpeg";
-
-// // const ScooterDetails = () => {
-// //   const location = useLocation();
-// //   const { scooter } = location.state || {}; // get scooter from navigation
-
-// //   if (!scooter) {
-// //     return <p>No scooter selected. Please go back and choose one.</p>;
-// //   }
-
-// //   // 🎨 Available colours
-// //   const colors = [
-// //     { name: "Navy Blue", image: Scooter1 },
-// //     { name: "Dark Red", image: Scooter2 },
-// //     { name: "Silver + Black", image: Scooter3 },
-// //     { name: "Deep Blue", image: Scooter4 },
-// //     { name: "Silver Metallic", image: Scooter5 },
-// //     { name: "Glossy Black", image: Scooter6 },
-// //   ];
-
-// //   const [selectedImage, setSelectedImage] = useState(colors[0].image);
-
-// //   return (
-// //     <>
-// //       <div className="bike-details-container">
-// //         <h1>{scooter.name}</h1>
-
-// //         {/* Main Image */}
-// //         <img
-// //           src={selectedImage}
-// //           alt={scooter.name}
-// //           className="bike-main-image"
-// //         />
-
-// //         {/* Price */}
-// //         <h1 className="bike-price">
-// //           Price: <span className="bike-details">{scooter.price}</span>
-// //         </h1>
-
-// //         {/* Description */}
-// //         <h1 className="bike-price">
-// //           Description:{" "}
-// //           <span className="bike-details">{scooter.description}</span>
-// //         </h1>
-
-// //         {/* Colour Picker */}
-// //         <div className="color-picker">
-// //           <h3>Choose Color:</h3>
-// //           {colors.map((color, index) => (
-// //             <button
-// //               key={index}
-// //               onClick={() => setSelectedImage(color.image)}
-// //               style={{
-// //                 background: `url(${color.image}) center/cover no-repeat`,
-// //                 width: "40px",
-// //                 height: "40px",
-// //                 margin: "5px",
-// //                 border: selectedImage === color.image ? "2px solid #000" : "2px solid #ccc",
-// //                 borderRadius: "50%",
-// //                 cursor: "pointer",
-// //               }}
-// //               title={color.name}
-// //             />
-// //           ))}
-// //         </div>
-// //       </div>
-
-// //       {/* Price Table */}
-// //       <div className="price-list">
-// //         <h3>Price Table</h3>
-// //         <table>
-// //           <thead>
-// //             <tr>
-// //               <th>Variant</th>
-// //               <th>STD</th>
-// //               <th>DLX</th>
-// //               <th>H-SMART</th>
-// //             </tr>
-// //           </thead>
-// //           <tbody>
-// //             <tr>
-// //               <td>Ex-Showroom</td>
-// //               <td>{scooter.price}</td>
-// //               <td>₹95,864</td>
-// //               <td>₹98,865</td>
-// //             </tr>
-// //             <tr>
-// //               <td>Insurance</td>
-// //               <td>₹6,809</td>
-// //               <td>₹6,930</td>
-// //               <td>₹6,965</td>
-// //             </tr>
-// //             <tr>
-// //               <td>Road Tax</td>
-// //               <td>₹11,734</td>
-// //               <td>₹12,786</td>
-// //               <td>₹13,087</td>
-// //             </tr>
-// //             <tr className="highlight">
-// //               <td>On Road</td>
-// //               <td>₹1,03,887</td>
-// //               <td>₹1,15,580</td>
-// //               <td>₹1,18,917</td>
-// //             </tr>
-// //             <tr>
-// //               <td>Accessories</td>
-// //               <td>₹4,980</td>
-// //               <td>₹4,980</td>
-// //               <td>₹4,980</td>
-// //             </tr>
-// //             <tr>
-// //               <td>Regt & Handling</td>
-// //               <td>₹1,985</td>
-// //               <td>₹1,985</td>
-// //               <td>₹1,985</td>
-// //             </tr>
-// //           </tbody>
-// //         </table>
-// //       </div>
-// //     </>
-// //   );
-// // };
-
-// // export default ScooterDetails;
-
-// import React, { useState, useEffect } from "react";
+// import { useState } from "react";
 // import { useLocation } from "react-router-dom";
-// import "../Styles/BikeDetails.css";
-
-// // import Activa125_1 from "../pages/scooters/activa125-MatAxisGrayMetallic.png";
-// // import Activa125_2 from "../pages/scooters/activa125-PearlDeepGroundGray.png";
-// // import Activa125_3 from "../pages/scooters/activa125-PearlIgneousBlack.png";
-// // import Activa125_4 from "../pages/scooters/activa125-PearlPreciousWhite.png";
-// // import Activa125_5 from "../pages/scooters/activa125-PearlSirenBlue.png";
-// // import Activa125_6 from "../pages/scooters/activa125-RebelRedMetallic.png";
-
-// // import Activa110_1 from "../pages/scooters/activa110-DecentBlueMetallic.png";
-// // import Activa110_2 from "../pages/scooters/activa110-MatAxisGrayMetallic.png";
-// // import Activa110_3 from "../pages/scooters/activa110-PearlIgneousBlack.png";
-// // import Activa110_4 from "../pages/scooters/activa110-PearlPreciousWhite.png";
-// // import Activa110_5 from "../pages/scooters/activa110-PearlSirenBlue.png";
-// // import Activa110_6 from "../pages/scooters/activa110-RebelRedMetallic.png";
-
-// // import Dio125_1 from "../pages/scooters/dio125-ImperialRed.png";
-// // import Dio125_2 from "../pages/scooters/dio125-MatMarvelBlueMetallic.png";
-// // import Dio125_3 from "../pages/scooters/dio125-PearlDeepGroundGray(Emblem).png";
-// // import Dio125_4 from "../pages/scooters/dio125-PearlDeepGroundGray(Stripe).png";
-// // import Dio125_5 from "../pages/scooters/dio125-PearlIgneousBlack.png";
-// // import Dio125_6 from "../pages/scooters/dio125-PearlSportsYellow.png";
-
-// // import Dio110_1 from "../pages/scooters/dio110-ImperialRedMetallic​.png";
-// // import Dio110_2 from "../pages/scooters/dio110-MatAxisGrayMetallic.png";
-// // import Dio110_3 from "../pages/scooters/dio110-MatMarvelBlue.png";
-// // import Dio110_4 from "../pages/scooters/dio110-PearlIgneousBlack+PearlDeepGroundGray.png";
-// // import Dio110_5 from "../pages/scooters/dio110-PearlIgneousBlack.png";
+// import "../Styles/ScooterOverview.css";
 
 // import Activa125_1 from "../assets/scooter images/scooters/activa125-MatAxisGrayMetallic.png";
 // import Activa125_2 from "../assets/scooter images/scooters/activa125-PearlDeepGroundGray.png";
@@ -561,59 +772,91 @@
 //   const location = useLocation();
 //   const { scooter } = location.state || {};
 
-//   if (!scooter) return <p>No scooter selected. Please go back and choose one.</p>;
+//   if (!scooter)
+//     return <p>No scooter selected. Please go back and choose one.</p>;
 
 //   let colors = [];
 
-//   if (scooter.name === "Activa 125") {
-//     colors = [
-//       { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa125_1, is360: true },
-//       { name: "Pearl Deep Ground Gray", code: "#444444", image: Activa125_2 },
-//       { name: "Pearl Igneous Black", code: "#000000", image: Activa125_3 },
-//       { name: "Pearl Precious White", code: "#ffffff", image: Activa125_4 },
-//       { name: "Pearl Siren Blue", code: "#1e3a8a", image: Activa125_5 },
-//       { name: "Rebel Red Metallic", code: "#8b0000", image: Activa125_6 },
-//     ];
-//   }
-//   else if (scooter.name === "Activa 110") {
-//     colors = [
-//       { name: "Decent Blue Metallic", code: "#1a2b8a", image: Activa110_1, is360: true },
-//       { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa110_2 },
-//       { name: "Pearl Igneous Black", code: "#000000", image: Activa110_3 },
-//       { name: "Pearl Precious White", code: "#ffffff", image: Activa110_4 },
-//       { name: "Pearl Siren Blue", code: "#1e40af", image: Activa110_5 },
-//       { name: "Rebel Red Metallic", code: "#8b0000", image: Activa110_6 },
-//     ];
-//   } else if (scooter.name === "Dio 125") {
-//     colors = [
-//       { name: "Imperial Red", code: "#ff1b1b", image: Dio125_1, is360: true },
-//       { name: "Mat Marvel Blue Metallic", code: "#1e3a8a", image: Dio125_2 },
-//       { name: "Pearl Deep Ground Gray (Emblem)", code: "#444444", image: Dio125_3 },
-//       { name: "Pearl Deep Ground Gray (Stripe)", code: "#555555", image: Dio125_4 },
-//       { name: "Pearl Igneous Black", code: "#000000", image: Dio125_5 },
-//       { name: "Pearl Sports Yellow", code: "#facc15", image: Dio125_6 },
-//     ];
-//   }
-//   else if (scooter.name === "Dio 110") {
-//     colors = [
-//       { name: "Imperial Red Metallic", code: "#ff1b1b", image: Dio110_1, is360: true },
-//       { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Dio110_2 },
-//       { name: "Mat Marvel Blue", code: "#1e3a8a", image: Dio110_3 },
-//       { name: "Pearl Igneous Black + Pearl Deep Ground Gray", code: "#333333", image: Dio110_4 },
-//       { name: "Pearl Igneous Black", code: "#000000", image: Dio110_5 },
-//     ];
+//   switch (scooter.name) {
+//     case "Activa 125":
+//       colors = [
+//         {
+//           name: "Mat Axis Gray Metallic",
+//           code: "#4a4a4a",
+//           image: Activa125_1
+//         },
+//         { name: "Pearl Deep Ground Gray", code: "#444444", image: Activa125_2 },
+//         { name: "Pearl Igneous Black", code: "#000000", image: Activa125_3 },
+//         { name: "Pearl Precious White", code: "#ffffff", image: Activa125_4 },
+//         { name: "Pearl Siren Blue", code: "#1e3a8a", image: Activa125_5 },
+//         { name: "Rebel Red Metallic", code: "#8b0000", image: Activa125_6 },
+//       ];
+//       break;
+
+//     case "Activa 110":
+//       colors = [
+//         {
+//           name: "Decent Blue Metallic",
+//           code: "#1a2b8a",
+//           image: Activa110_1
+//         },
+//         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa110_2 },
+//         { name: "Pearl Igneous Black", code: "#000000", image: Activa110_3 },
+//         { name: "Pearl Precious White", code: "#ffffff", image: Activa110_4 },
+//         { name: "Pearl Siren Blue", code: "#1e40af", image: Activa110_5 },
+//         { name: "Rebel Red Metallic", code: "#8b0000", image: Activa110_6 },
+//       ];
+//       break;
+
+//     case "Dio 125":
+//       colors = [
+//         { name: "Imperial Red", code: "#ff1b1b", image: Dio125_1, is360: true },
+//         { name: "Mat Marvel Blue Metallic", code: "#1e3a8a", image: Dio125_2 },
+//         {
+//           name: "Pearl Deep Ground Gray (Emblem)",
+//           code: "#444444",
+//           image: Dio125_3,
+//         },
+//         {
+//           name: "Pearl Deep Ground Gray (Stripe)",
+//           code: "#555555",
+//           image: Dio125_4,
+//         },
+//         { name: "Pearl Igneous Black", code: "#000000", image: Dio125_5 },
+//         { name: "Pearl Sports Yellow", code: "#facc15", image: Dio125_6 },
+//       ];
+//       break;
+
+//     case "Dio 110":
+//       colors = [
+//         {
+//           name: "Imperial Red Metallic",
+//           code: "#ff1b1b",
+//           image: Dio110_1
+//         },
+//         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Dio110_2 },
+//         { name: "Mat Marvel Blue", code: "#1e3a8a", image: Dio110_3 },
+//         {
+//           name: "Pearl Igneous Black + Pearl Deep Ground Gray",
+//           code: "#333333",
+//           image: Dio110_4,
+//         },
+//         { name: "Pearl Igneous Black", code: "#000000", image: Dio110_5 },
+//       ];
+//       break;
+
+//     default:
+//       colors = [];
 //   }
 
-//   // 🖼 Default selected color
-//   const [selectedImage, setSelectedImage] = useState(colors[0].image);
-//   const [selectedColorName, setSelectedColorName] = useState(colors[0].name);
+//   // ✅ State: selected color object
+//   const [selectedColor, setSelectedColor] = useState(colors[0]);
 //   const [animate, setAnimate] = useState(true);
 
 //   const handleColorChange = (color) => {
 //     setAnimate(false);
 //     setTimeout(() => {
-//       setSelectedImage(color.image);
-//       setSelectedColorName(color.name);
+//       setSelectedColor(color);
 //       setAnimate(true);
 //     }, 200);
 //   };
@@ -624,10 +867,16 @@
 
 //       {/* 🏍️ Image with rotation + fade animation */}
 //       <div className={`bike-image-wrapper ${animate ? "fade-in" : ""}`}>
-//         <img src={selectedImage} alt={scooter.name} className="bike-main-image spin-once" />
+//         <img
+//           src={selectedColor.image}
+//           alt={scooter.name}
+//           className="bike-main-image spin-once"
+//         />
 //       </div>
 
-//       <h2>Price: <span>{scooter.price}</span></h2>
+//       <h2>
+//         Price: <span>{scooter.price}</span>
+//       </h2>
 
 //       {/* 📝 Description */}
 //       <p className="bike-description">{scooter.description}</p>
@@ -635,7 +884,14 @@
 //       {/* Color Picker */}
 //       <div className="color-picker">
 //         <h3>Choose Color:</h3>
-//         <div style={{ display: "flex", gap: "10px", marginTop: "10px", flexWrap: "wrap" }}>
+//         <div
+//           style={{
+//             display: "flex",
+//             gap: "10px",
+//             marginTop: "10px",
+//             flexWrap: "wrap",
+//           }}
+//         >
 //           {colors.map((color, index) => (
 //             <div
 //               key={index}
@@ -645,38 +901,47 @@
 //                 width: "40px",
 //                 height: "40px",
 //                 borderRadius: "50%",
-//                 border: selectedImage === color.image ? "3px solid #d50000" : "2px solid #ccc",
+//                 border:
+//                   selectedColor.image === color.image
+//                     ? "3px solid #d50000"
+//                     : "2px solid #ccc",
 //                 cursor: "pointer",
 //                 position: "relative",
-//                 transition: "all 0.3s ease"
+//                 transition: "all 0.3s ease",
 //               }}
 //               title={color.name}
 //             >
-//               {color.is360 && (
-//                 <div style={{
-//                   position: "absolute",
-//                   top: "-8px",
-//                   right: "-8px",
-//                   background: "#d50000",
-//                   color: "white",
-//                   borderRadius: "50%",
-//                   width: "16px",
-//                   height: "16px",
-//                   fontSize: "10px",
-//                   display: "flex",
-//                   alignItems: "center",
-//                   justifyContent: "center"
-//                 }}>
+//               {/* {color.is360 && (
+//                 <div
+//                   style={{
+//                     position: "absolute",
+//                     top: "-8px",
+//                     right: "-8px",
+//                     background: "#d50000",
+//                     color: "white",
+//                     borderRadius: "50%",
+//                     width: "16px",
+//                     height: "16px",
+//                     fontSize: "10px",
+//                     display: "flex",
+//                     alignItems: "center",
+//                     justifyContent: "center",
+//                   }}
+//                 >
 //                   360°
 //                 </div>
-//               )}
+//               )} */}
 //             </div>
 //           ))}
 //         </div>
-//         <p style={{ marginTop: "10px" }}>
-//           Selected Color: <strong>{selectedColorName}</strong>
-//           {selectedColor.is360 && <span style={{ color: "#d50000", marginLeft: "10px" }}>✨ 360° View Available</span>}
-//         </p>
+//         {/* <p style={{ marginTop: "10px" }}>
+//           Selected Color: <strong>{selectedColor.name}</strong>
+//           {selectedColor.is360 && (
+//             <span style={{ color: "#d50000", marginLeft: "10px" }}>
+//               ✨ 360° View Available
+//             </span>
+//           )}
+//         </p> */}
 //       </div>
 
 //       {/* Price Table */}
@@ -737,9 +1002,13 @@
 
 // export default ScooterOverview;
 
+
+
+
+
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import "../Styles/BikeDetails.css";
+import "../Styles/ScooterOverview.css";
 
 import Activa125_1 from "../assets/scooter images/scooters/activa125-MatAxisGrayMetallic.png";
 import Activa125_2 from "../assets/scooter images/scooters/activa125-PearlDeepGroundGray.png";
@@ -780,12 +1049,7 @@ const ScooterOverview = () => {
   switch (scooter.name) {
     case "Activa 125":
       colors = [
-        {
-          name: "Mat Axis Gray Metallic",
-          code: "#4a4a4a",
-          image: Activa125_1,
-          is360: true,
-        },
+        { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa125_1 },
         { name: "Pearl Deep Ground Gray", code: "#444444", image: Activa125_2 },
         { name: "Pearl Igneous Black", code: "#000000", image: Activa125_3 },
         { name: "Pearl Precious White", code: "#ffffff", image: Activa125_4 },
@@ -796,12 +1060,7 @@ const ScooterOverview = () => {
 
     case "Activa 110":
       colors = [
-        {
-          name: "Decent Blue Metallic",
-          code: "#1a2b8a",
-          image: Activa110_1,
-          is360: true,
-        },
+        { name: "Decent Blue Metallic", code: "#1a2b8a", image: Activa110_1 },
         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa110_2 },
         { name: "Pearl Igneous Black", code: "#000000", image: Activa110_3 },
         { name: "Pearl Precious White", code: "#ffffff", image: Activa110_4 },
@@ -812,18 +1071,10 @@ const ScooterOverview = () => {
 
     case "Dio 125":
       colors = [
-        { name: "Imperial Red", code: "#ff1b1b", image: Dio125_1, is360: true },
+        { name: "Imperial Red", code: "#ff1b1b", image: Dio125_1 },
         { name: "Mat Marvel Blue Metallic", code: "#1e3a8a", image: Dio125_2 },
-        {
-          name: "Pearl Deep Ground Gray (Emblem)",
-          code: "#444444",
-          image: Dio125_3,
-        },
-        {
-          name: "Pearl Deep Ground Gray (Stripe)",
-          code: "#555555",
-          image: Dio125_4,
-        },
+        { name: "Pearl Deep Ground Gray (Emblem)", code: "#444444", image: Dio125_3 },
+        { name: "Pearl Deep Ground Gray (Stripe)", code: "#555555", image: Dio125_4 },
         { name: "Pearl Igneous Black", code: "#000000", image: Dio125_5 },
         { name: "Pearl Sports Yellow", code: "#facc15", image: Dio125_6 },
       ];
@@ -831,19 +1082,10 @@ const ScooterOverview = () => {
 
     case "Dio 110":
       colors = [
-        {
-          name: "Imperial Red Metallic",
-          code: "#ff1b1b",
-          image: Dio110_1,
-          is360: true,
-        },
+        { name: "Imperial Red Metallic", code: "#ff1b1b", image: Dio110_1 },
         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Dio110_2 },
         { name: "Mat Marvel Blue", code: "#1e3a8a", image: Dio110_3 },
-        {
-          name: "Pearl Igneous Black + Pearl Deep Ground Gray",
-          code: "#333333",
-          image: Dio110_4,
-        },
+        { name: "Pearl Igneous Black + Pearl Deep Ground Gray", code: "#333333", image: Dio110_4 },
         { name: "Pearl Igneous Black", code: "#000000", image: Dio110_5 },
       ];
       break;
@@ -852,7 +1094,6 @@ const ScooterOverview = () => {
       colors = [];
   }
 
-  // ✅ State: selected color object
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [animate, setAnimate] = useState(true);
 
@@ -868,12 +1109,12 @@ const ScooterOverview = () => {
     <div className="bike-details-container">
       <h1>{scooter.name}</h1>
 
-      {/* 🏍️ Image with rotation + fade animation */}
-      <div className={`bike-image-wrapper ${animate ? "fade-in" : ""}`}>
+      {/* Image with subtle rotation + fade */}
+      <div className={`bike-image-wrapper ${animate ? "fade-in rotate-image" : ""}`}>
         <img
           src={selectedColor.image}
           alt={scooter.name}
-          className="bike-main-image spin-once"
+          className="bike-main-image"
         />
       </div>
 
@@ -881,70 +1122,22 @@ const ScooterOverview = () => {
         Price: <span>{scooter.price}</span>
       </h2>
 
-      {/* 📝 Description */}
       <p className="bike-description">{scooter.description}</p>
 
       {/* Color Picker */}
       <div className="color-picker">
         <h3>Choose Color:</h3>
-        <div
-          style={{
-            display: "flex",
-            gap: "10px",
-            marginTop: "10px",
-            flexWrap: "wrap",
-          }}
-        >
+        <div className="color-picker-grid">
           {colors.map((color, index) => (
             <div
               key={index}
               onClick={() => handleColorChange(color)}
-              style={{
-                backgroundColor: color.code,
-                width: "40px",
-                height: "40px",
-                borderRadius: "50%",
-                border:
-                  selectedColor.image === color.image
-                    ? "3px solid #d50000"
-                    : "2px solid #ccc",
-                cursor: "pointer",
-                position: "relative",
-                transition: "all 0.3s ease",
-              }}
+              className={`color-circle ${selectedColor.image === color.image ? "selected" : ""}`}
+              style={{ backgroundColor: color.code }}
               title={color.name}
-            >
-              {color.is360 && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "-8px",
-                    right: "-8px",
-                    background: "#d50000",
-                    color: "white",
-                    borderRadius: "50%",
-                    width: "16px",
-                    height: "16px",
-                    fontSize: "10px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  360°
-                </div>
-              )}
-            </div>
+            />
           ))}
         </div>
-        <p style={{ marginTop: "10px" }}>
-          Selected Color: <strong>{selectedColor.name}</strong>
-          {selectedColor.is360 && (
-            <span style={{ color: "#d50000", marginLeft: "10px" }}>
-              ✨ 360° View Available
-            </span>
-          )}
-        </p>
       </div>
 
       {/* Price Table */}
