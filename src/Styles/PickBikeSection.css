@@ -1,0 +1,392 @@
+/* Pick Bike Section Styles */
+.pick-bike-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pick-bike-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
+  background-size: cover;
+  background-position: top;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #d50000, #b71c1c);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* Navigation */
+.bike-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.nav-arrow {
+  background: #333;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+.nav-arrow:hover {
+  background: #d50000;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(213,0,0,0.3);
+}
+
+.nav-arrow-left {
+  margin-right: 20px;
+}
+
+.nav-arrow-right {
+  margin-left: 20px;
+}
+
+.bike-tabs {
+  display: flex;
+  background: #333;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.bike-tab {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  min-width: 120px;
+}
+
+.bike-tab:hover {
+  background: rgba(213, 0, 0, 0.2);
+}
+
+.bike-tab.active {
+  background: #d50000;
+  color: white;
+}
+
+.bike-tab:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Vehicle Display */
+.vehicle-display {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+}
+
+.vehicle-image {
+  text-align: center;
+  position: relative;
+}
+
+.vehicle-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+  transition: transform 0.3s ease;
+}
+
+.vehicle-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Vehicle Details */
+.vehicle-details {
+  padding-left: 30px;
+}
+
+.vehicle-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.vehicle-price {
+  margin-bottom: 30px;
+}
+
+.price-amount {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4285f4;
+  display: block;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Vehicle Actions */
+.vehicle-actions {
+  margin-bottom: 40px;
+}
+
+.btn-quote {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.btn-quote:hover {
+  background: #d50000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(213,0,0,0.3);
+}
+
+.vehicle-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vehicle-link {
+  color: #4285f4;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.vehicle-link:hover {
+  color: #d50000;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #ccc;
+}
+
+/* Vehicle Specifications */
+.vehicle-specs {
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e9ecef;
+}
+
+.spec-item {
+  text-align: center;
+  flex: 1;
+}
+
+.spec-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.spec-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .vehicle-details {
+    padding-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .bike-tabs {
+    flex-wrap: wrap;
+    border-radius: 15px;
+  }
+  
+  .bike-tab {
+    min-width: 100px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .nav-arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pick-bike-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .vehicle-display {
+    padding: 25px;
+  }
+  
+  .vehicle-name {
+    font-size: 1.8rem;
+  }
+  
+  .price-amount {
+    font-size: 1.5rem;
+  }
+  
+  .vehicle-specs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .bike-navigation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-arrow {
+    display: none;
+  }
+  
+  .bike-tabs {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .vehicle-display {
+    padding: 20px;
+  }
+  
+  .bike-tab {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+  
+  .vehicle-specs {
+    gap: 15px;
+  }
+  
+  .spec-value {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vehicle-display {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(213,0,0,.3);
+  border-radius: 50%;
+  border-top-color: #d50000;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

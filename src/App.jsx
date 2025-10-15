@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage";
 // import CommunityCarousel from "./pages/CommunityCarousel";
 import GoogleRevies from "./pages/GoogleReviews";
 import FounderSection from "./pages/FounderSection";
+import PickBikeSection from "./components/PickBikeSection";
 import EVList from "./pages/sales/EVList"; // Make sure this exists
 import ScooterList from "./pages/sales/ScooterList";
 // import DealerNetworkSection from "./pages/dealer/DealerNetworkSection";
@@ -39,6 +40,7 @@ function App() {
           element={
             <>
               <HomePage />
+             <PickBikeSection />
               {/* <RideCards /> */}
               {/* <ImageCarousel /> */}
               {/* <CommunityCarousel /> */}
