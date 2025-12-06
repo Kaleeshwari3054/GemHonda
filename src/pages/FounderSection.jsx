@@ -5,13 +5,13 @@ const FounderSection = () => {
   return (
     <section className="founder-section">
       <div className="container">
-        <div className="section-header">
+        {/* <div className="section-header">
           <h2>Our Leadership Team</h2>
           <p>Meet the people who drive our success</p>
-        </div>
+        </div> */}
 
-        <div className="leaders-container">
-          {/* Manager Section */}
+        {/* <div className="leaders-container">
+         
           <div className="col-lg-6 col-md-6">
             <div className="leader-card manager-card">
               <div className="leader-image">
@@ -50,7 +50,6 @@ const FounderSection = () => {
             </div>
           </div>
 
-          {/* Employee of the Month Section */}
           <div className="col-lg-6 col-md-6">
             <div className="leader-card employee-card">
               <div className="leader-image">
@@ -92,7 +91,7 @@ const FounderSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Company Values */}
         <div className="company-values">
@@ -149,7 +148,7 @@ const FounderSection = () => {
                   <i className="fas fa-phone"></i> +91 909 432 0000
                 </p>
                 <p>
-                  <i className="fas fa-envelope"></i> thegemhonda@gmail.com
+                  <i className="fas fa-envelope"></i> Gemmotors@thegemmotors.com
                 </p>
                 <p>
                   <i className="fas fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM

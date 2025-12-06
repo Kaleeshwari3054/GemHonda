@@ -5,13 +5,16 @@
   /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 }
 
+
+
+
 /* Advanced Carousel Styles */
 .carousel {
-  height: 100vh;
+  height: 80vh;
 }
 
 .carousel-inner {
-  height: 100vh;
+  height: 60vh;
 }
 
 .carousel-item {
@@ -20,7 +23,7 @@
 }
 .banner-image {
   position: relative;
-  height: 100vh;
+  height: 60vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -178,7 +181,8 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 1px solid #424141;
+ /* padding-left: 10px; */
   background-color: transparent;
   opacity: 0.6;
   transition: all 0.3s ease;

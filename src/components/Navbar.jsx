@@ -138,9 +138,9 @@ const Navbar = () => {
         >
           <span className="dropdown-toggle">Sales</span>
           <ul className="dropdown-menu">
-            <li>
+            {/* <li>
               <Link to="/evlist">EV</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/bike-list">Motorcycles</Link>
             </li>
@@ -172,13 +172,13 @@ const Navbar = () => {
         </li>
 
         {/* ABOUT */}
-        <li
+        {/* <li
           className={`dropdown ${openDropdown === "about" ? "open" : ""}`}
           onMouseEnter={() => handleMouseEnter("about")}
           onMouseLeave={handleMouseLeave}
           onClick={() => toggleDropdown("about")}
-        >
-          <span className="dropdown-toggle">About Honda </span>
+        > */}
+          {/* <span className="dropdown-toggle">About Honda </span>
           <ul className="dropdown-menu">
             <li>
               <Link to="#">Corporate</Link>
@@ -204,8 +204,8 @@ const Navbar = () => {
             <li>
               <Link to="#">Careers</Link>
             </li>
-          </ul>
-        </li>
+          </ul> */}
+        {/* </li> */}
 
         <li>
           <Link to="/contact-container">Contact Us</Link>

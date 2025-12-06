@@ -38,7 +38,7 @@ export default function AboutUs() {
               Read More
             </a>
             <a
-              href="#contact"
+              href="#contact-container"
               className="fw-semibold text-decoration-none"
               style={{ color: "hsl(0, 73%, 41%)" }}
             >

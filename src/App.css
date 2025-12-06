@@ -1,4 +1,102 @@
 /* App.css */
+/* Main Page */
+.sitemap-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 40px 15px;
+  font-family: Arial, sans-serif;
+}
+
+.sitemap-container {
+  max-width: 1200px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Title */
+.sitemap-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* Grid */
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  align-items: flex-start;
+}
+
+/* Sections */
+.sitemap-section {
+  text-align: center;
+}
+
+.sitemap-header {
+  background: #2f2f2f;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Links */
+.sitemap-link {
+  display: block;
+  background: #ececec;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.sitemap-link:hover {
+  background: #d5d5d5;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .sitemap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Default: desktop */
 .page-content {

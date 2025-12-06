@@ -110,12 +110,18 @@ import Activa110 from "./pages/scooters/Activa110";
 import Dio125 from "./pages/scooters/Dio125";
 import Dio110 from "./pages/scooters/Dio110";
 import "./App.css";
+import SiteMap from "./components/Sitemap";
+import Privacypolicy from "./components/Privacypolicy";
+import Disclaimer from "./components/Disclaimer";
+import Termsandcondition from "./components/Termsandcondition";
+import ScrollToTop from "./pages/ScrollToTop";
 
 // import ExtendedWarranty from "./pages/Services/Maintenance/ExtendedWarranty";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       {/* Add a wrapper for all page content */}
       <div className="page-content">
@@ -124,6 +130,8 @@ function App() {
             path="/"
             element={
               <>
+                {/* 🔥 Important */}
+
                 <HomePage />
                 <AboutUs />
                 <PickBikeSection />
@@ -146,6 +154,10 @@ function App() {
           <Route path="/scooters/dio-125" element={<Dio125 />} />
           <Route path="/scooters/dio-110" element={<Dio110 />} />
           <Route path="/scooter/:slug" element={<ScooterOverview />} />
+          <Route path="/sitemap" element={<SiteMap />} />
+          <Route path="/privacy-policy" element={<Privacypolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/terms" element={<Termsandcondition />} />
           <Route
             path="/scooter-overview-container"
             element={<ScooterOverview />}
