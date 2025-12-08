@@ -121,10 +121,10 @@ const Footer = () => {
     <div className="footer-social">
       <h5>Follow Us</h5>
       <div className="social-icons">
-        <a href="https://www.facebook.com/HondaIndia" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-        <a href="https://www.instagram.com/honda_india/" target="_blank" rel="noreferrer"><FaInstagram /></a>
-        <a href="https://www.linkedin.com/company/honda-india/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-        <a href="https://www.youtube.com/user/Honda2WheelersIndia" target="_blank" rel="noreferrer"><FaYoutube /></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><FaInstagram /></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer"><FaYoutube /></a>
       </div>
     </div>
   </div>
