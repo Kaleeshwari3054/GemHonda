@@ -1,0 +1,32 @@
+.reviews-slider {
+  width: 90%;
+  margin: 150px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scrollReviews 45s linear infinite;
+}
+
+.review-card {
+  max-width: 300px;
+}
+
+@keyframes scrollReviews {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    min-width: 280px;
+  }
+}

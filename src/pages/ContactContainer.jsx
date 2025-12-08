@@ -39,10 +39,22 @@ const ContactContainer = () => {
 
         {/* Right Side - Info + Map */}
         <div className="contact-info">
-          <h3>Gem Honda Bike Showroom</h3>
+          <h3 className="heading">Gem Honda </h3>
           <p>📍 2/9 Yaathaval Street,Virugambakkam Chennai, Tamil Nadu, India</p>
-          <p>📞 +91 909 432 0000 </p>
-          <p>✉️ thegemhonda@gmail.com</p>
+        <p className="phone-row">
+  📞 <span>Service – <a href="tel:7299999711">7299999711</a></span>
+  <span className="divider">|</span>
+  📞 <span>Sales – <a href="tel:7299999733">7299999733</a></span>
+</p>
+      <div className="email-row">
+ 
+    📧 <a href="mailto:Gemmotors@thegemmotors.com">Gemmotors@thegemmotors.com</a>
+<br/>
+ 
+    📨 <a href="mailto:Customercare@thegemmotors.com">Customercare@thegemmotors.com</a>
+ 
+</div>
+
 <div className="map">
   <img 
     src="https://www.shutterstock.com/image-photo/portrait-attractive-trendy-cheerful-girl-600nw-2161154411.jpg" 

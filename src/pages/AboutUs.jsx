@@ -2,7 +2,7 @@ import React from "react";
 import imageSrc from "../assets/image.png";
 export default function AboutUs() {
   return (
-    <section className="container py-5">
+    <section className="container py-5" id="about">
       <div className="row align-items-center">
         <h2
   className="fw-bold mb-3 text-center"

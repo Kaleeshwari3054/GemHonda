@@ -126,7 +126,9 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
         <img src={Logo} alt="Honda Logo" className="logo" />
+         <span className="logo-text">GEM HONDA</span>
       </Link>
+     
 
       <ul className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}>
         {/* SALES */}
@@ -142,10 +144,11 @@ const Navbar = () => {
               <Link to="/evlist">EV</Link>
             </li> */}
             <li>
-              <Link to="/bike-list">Motorcycles</Link>
+            
+               <Link to="/scooter-page">Scooters</Link>
             </li>
             <li>
-              <Link to="/scooter-page">Scooters</Link>
+               <Link to="/bike-list">Motorcycles</Link>
             </li>
           </ul>
         </li>
@@ -162,12 +165,12 @@ const Navbar = () => {
             <li>
               <Link to="/offers">Offers</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/warranty">Warranty</Link>
             </li>
             <li>
               <Link to="/free-services">Free Services</Link>
-            </li>
+            </li> */}
           </ul>
         </li>
 

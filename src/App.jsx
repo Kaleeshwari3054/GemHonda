@@ -115,9 +115,8 @@ import Privacypolicy from "./components/Privacypolicy";
 import Disclaimer from "./components/Disclaimer";
 import Termsandcondition from "./components/Termsandcondition";
 import ScrollToTop from "./pages/ScrollToTop";
-
-// import ExtendedWarranty from "./pages/Services/Maintenance/ExtendedWarranty";
-
+import Offers from "./pages/Offers";
+import Reviews from "./pages/Reviews";
 function App() {
   return (
     <>
@@ -137,6 +136,7 @@ function App() {
                 <PickBikeSection />
                 {/* <GoogleRevies /> */}
                 <FounderSection />
+                <Reviews />
                 {/* <GoogleMap /> */}
               </>
             }
@@ -166,6 +166,7 @@ function App() {
             path="/scooter-colours-container"
             element={<ScooterColours />}
           />
+            <Route path="/offers" element={<Offers />} />
         </Routes>
       </div>
       <Footer />

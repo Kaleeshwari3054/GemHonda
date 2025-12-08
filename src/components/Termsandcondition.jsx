@@ -19,7 +19,7 @@ const TermsConditions = () => {
           <li><strong>Company:</strong> GEM Honda, an authorized Honda two-wheeler dealership, located in Tamil Nadu, India.</li>
           <li><strong>Device:</strong> Any device that can access the Service such as computer, mobile phone, or tablet.</li>
           <li><strong>Service:</strong> The website and services provided by GEM Honda.</li>
-          <li><strong>Website:</strong> GEM Honda, accessible from <a href="https://www.gemhonda.com/" target="_blank" rel="noopener noreferrer">https://www.gemhonda.com/</a>.</li>
+          <li><strong>Website:</strong> GEM Honda, accessible from <a href="https://www.thegemmotors.com/" target="_blank" rel="noopener noreferrer">https://www.thegemmotors.com/</a>.</li>
           <li><strong>You:</strong> The individual or legal entity accessing or using the Service.</li>
         </ul>
       </section>
@@ -90,9 +90,9 @@ const TermsConditions = () => {
         <h2>12. Contact Us</h2>
         <p>If you have any questions, contact us:</p>
         <ul>
-          <li><strong>Email:</strong> support@gemhonda.com</li>
-          <li><strong>Phone:</strong> +91-XXXXXXXXXX</li>
-          <li><strong>Address:</strong> GEM Honda, Tamil Nadu, India</li>
+          <li><strong>Email:</strong> Gemmotors@thegemmotors.com</li>
+          <li><strong>Phone:</strong> +91-9094320000</li>
+          <li><strong>Address:</strong>2/9 Yaathaval Street,Virugambakkam Chennai, Tamil Nadu, India</li>
         </ul>
       </section>
     </div>

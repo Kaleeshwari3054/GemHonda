@@ -84,64 +84,64 @@ const Footer = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-container">
+  <div className="footer-container">
 
-          {/* Newsletter */}
-          <div className="newsletter">
-            <p className="footer-heading">Subscribe to Newsletter</p>
-            <div className="newsletter-form">
-              <input type="email" placeholder="Enter your email" />
-              <button>→</button>
-            </div>
-          </div>
+    {/* Newsletter */}
+    <div className="newsletter">
+      <p className="footer-heading">Subscribe to Newsletter</p>
+      <div className="newsletter-form">
+        <input type="email" placeholder="Enter your email" />
+        <button>→</button>
+      </div>
+    </div>
 
-          {/* Quick Links */}
-          <div className="footer-links">
-            <h5>Quick Links</h5>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/outlet">Our Outlets</Link></li>
-              <li><Link to="/offers">Offers</Link></li>
-              <li><Link to="/book-service">Book Service</Link></li>
-              <li><Link to="/careers">Careers</Link></li>
-            </ul>
-          </div>
+    {/* Quick Links */}
+    <div className="footer-links">
+      <h5>Quick Links</h5>
+  <ul>
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/offers">Offers</Link></li>
+   <li><Link to="/scooter-page">sales</Link></li>
+    <li><Link to="/contact-container">Contact</Link></li>
+</ul>
 
-          {/* Legal Links */}
-          <div className="footer-links">
-            <h5>Legal</h5>
-            <ul>
-              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
-              <li><Link to="/disclaimer">Disclaimer</Link></li>
-              <li><Link to="/terms">Terms & Conditions</Link></li>
-              <li><Link to="/sitemap">Sitemap</Link></li>
-            </ul>
-          </div>
+    </div>
 
-          {/* Social Media */}
-          <div className="footer-social">
-            <h5>Follow Us</h5>
-            <div className="social-icons">
-              <a href="https://www.facebook.com/HondaIndia" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-              <a href="https://www.instagram.com/honda_india/" target="_blank" rel="noreferrer"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/company/honda-india/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
-              <a href="https://www.youtube.com/user/Honda2WheelersIndia" target="_blank" rel="noreferrer"><FaYoutube /></a>
-            </div>
-          </div>
-        </div>
+    {/* Contact Info */}
+    <div className="footer-contact">
+      <h5>Contact Us</h5>
+      <p>
+        📞 <a href="tel:+919094320000">+91-919094320000</a><br />
+        📧 <a href="mailto:Gemmotors@thegemmotors.com">Gemmotors@thegemmotors.com</a><br />
+        📨 <a href="mailto:Customercare@thegemmotors.com">Customercare@thegemmotors.com</a>
+      </p>
+    </div>
 
-        {/* Footer Bottom */}
-        <div className="footer-bottom">
-          <p>© 2025 Gem Honda Motorcycle & Scooter India Pvt. Ltd. All Rights Reserved.</p>
-          <p>
-            📞 <a href="tel:+917299999733">+91 72999 99733</a> | 
-            📧 <a href="mailto:Gemmotors@thegemmotors.com">Gemmotors@thegemmotors.com</a> | 
-            📨 <a href="mailto:Customercare@thegemmotors.com">Customercare@thegemmotors.com</a>
-          </p>
-        </div>
-      </footer>
+    {/* Social Media */}
+    <div className="footer-social">
+      <h5>Follow Us</h5>
+      <div className="social-icons">
+        <a href="https://www.facebook.com/HondaIndia" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+        <a href="https://www.instagram.com/honda_india/" target="_blank" rel="noreferrer"><FaInstagram /></a>
+        <a href="https://www.linkedin.com/company/honda-india/" target="_blank" rel="noreferrer"><FaLinkedinIn /></a>
+        <a href="https://www.youtube.com/user/Honda2WheelersIndia" target="_blank" rel="noreferrer"><FaYoutube /></a>
+      </div>
+    </div>
+  </div>
+
+  {/* Footer Bottom */}
+  <div className="footer-bottom">
+   
+    <p className="legal-links">
+      <Link to="/privacy-policy">Privacy Policy</Link> | 
+      <Link to="/disclaimer">Disclaimer</Link> | 
+      <Link to="/terms">Terms & Conditions</Link> | 
+      <Link to="/sitemap">Sitemap</Link>
+    </p>
+     <p>© 2025 Gem Motors. All Rights Reserved.</p>
+  </div>
+</footer>
+
     </>
   );
 };
