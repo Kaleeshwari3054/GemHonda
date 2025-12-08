@@ -40,7 +40,6 @@ function App() {
               </>
             }
           />
-          <Route path="/evlist" element={<EVList />} />
           <Route path="/bike-list" element={<BikeList />} />
           <Route path="/scooter-page" element={<ScooterList />} />
           <Route path="/contact-container" element={<ContactContainer />} />
