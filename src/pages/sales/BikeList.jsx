@@ -19,8 +19,8 @@ const bikes=[
       { name: "Red", image: "https://imgd.aeplcdn.com/1056x594/n/g67bafb_1809975.jpg?q=80" },
       { name: "Blue", image: "https://imgd.aeplcdn.com/1056x594/n/1q6bafb_1809979.jpg?q=80" },
       { name: "Black", image: "https://imgd.aeplcdn.com/1056x594/n/zdqbafb_1809981.jpg?q=80" },
-      { name: "Mat Marvel Blue Metallic", image: "https://imgd.aeplcdn.com/1056x594/n/905bafb_1809983.jpg?q=80"},
-      { name: "Mat Axis Grey Metallic", image: "https://imgd.aeplcdn.com/1056x594/n/u2nbafb_1809977.jpg?q=80"},
+      { name: "Mat Marvel Blue Metallic", code: "#071a36", image: "https://imgd.aeplcdn.com/1056x594/n/905bafb_1809983.jpg?q=80"},
+      { name: "Mat Axis Grey Metallic", code: "#29302c", image: "https://imgd.aeplcdn.com/1056x594/n/u2nbafb_1809977.jpg?q=80"},
   ]
 },
 {

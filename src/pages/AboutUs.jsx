@@ -26,7 +26,7 @@ export default function AboutUs() {
             we make every journey begin with trust.
           </p>
 
-          <div className="d-flex align-items-center gap-3">
+          {/* <div className="d-flex align-items-center gap-3">
             <a
               href="#"
               className="btn px-4 rounded-pill text-white"
@@ -44,7 +44,7 @@ export default function AboutUs() {
             >
               Contact Us
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Right: Image */}

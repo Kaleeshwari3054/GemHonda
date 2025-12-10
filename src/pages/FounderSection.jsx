@@ -148,7 +148,7 @@ const FounderSection = () => {
                   <i className="fas fa-phone"></i> +91 909 432 0000
                 </p>
                 <p>
-                  <i className="fas fa-envelope"></i> Gemmotors@thegemmotors.com
+                  <i className="fas fa-envelope"></i> gemmotors@thegemmotors.com
                 </p>
                 <p>
                   <i className="fas fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM

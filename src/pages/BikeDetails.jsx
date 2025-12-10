@@ -31,6 +31,7 @@ const BikeDetails = () => {
               margin: "5px",
               border: "2px solid #ccc",
               cursor: "pointer",
+              borderRadius: "50%",
             }}
           ></button>
         ))}

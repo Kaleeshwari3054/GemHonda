@@ -1006,7 +1006,7 @@
 
 
 
-import { useState } from "react";
+import  { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../Styles/ScooterOverview.css";
 
@@ -1050,21 +1050,21 @@ const ScooterOverview = () => {
     case "Activa 125":
       colors = [
         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa125_1 },
-        { name: "Pearl Deep Ground Gray", code: "#444444", image: Activa125_2 },
+        { name: "Pearl Deep Ground Gray", code: "#29302c", image: Activa125_2 },
         { name: "Pearl Igneous Black", code: "#000000", image: Activa125_3 },
         { name: "Pearl Precious White", code: "#ffffff", image: Activa125_4 },
-        { name: "Pearl Siren Blue", code: "#1e3a8a", image: Activa125_5 },
+        { name: "Pearl Siren Blue", code: "#21232d", image: Activa125_5 },
         { name: "Rebel Red Metallic", code: "#8b0000", image: Activa125_6 },
       ];
       break;
 
     case "Activa 110":
       colors = [
-        { name: "Decent Blue Metallic", code: "#1a2b8a", image: Activa110_1 },
+        { name: "Decent Blue Metallic", code: "#022c5a", image: Activa110_1 },
         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Activa110_2 },
         { name: "Pearl Igneous Black", code: "#000000", image: Activa110_3 },
         { name: "Pearl Precious White", code: "#ffffff", image: Activa110_4 },
-        { name: "Pearl Siren Blue", code: "#1e40af", image: Activa110_5 },
+        { name: "Pearl Siren Blue", code: "#222434", image: Activa110_5 },
         { name: "Rebel Red Metallic", code: "#8b0000", image: Activa110_6 },
       ];
       break;
@@ -1072,7 +1072,7 @@ const ScooterOverview = () => {
     case "Dio 125":
       colors = [
         { name: "Imperial Red", code: "#ff1b1b", image: Dio125_1 },
-        { name: "Mat Marvel Blue Metallic", code: "#1e3a8a", image: Dio125_2 },
+        { name: "Mat Marvel Blue Metallic", code: "rgb(33, 111, 176)", image: Dio125_2 },
         { name: "Pearl Deep Ground Gray (Emblem)", code: "#444444", image: Dio125_3 },
         { name: "Pearl Deep Ground Gray (Stripe)", code: "#555555", image: Dio125_4 },
         { name: "Pearl Igneous Black", code: "#000000", image: Dio125_5 },
@@ -1084,9 +1084,9 @@ const ScooterOverview = () => {
       colors = [
         { name: "Imperial Red Metallic", code: "#ff1b1b", image: Dio110_1 },
         { name: "Mat Axis Gray Metallic", code: "#4a4a4a", image: Dio110_2 },
-        { name: "Mat Marvel Blue", code: "#1e3a8a", image: Dio110_3 },
-        { name: "Pearl Igneous Black + Pearl Deep Ground Gray", code: "#333333", image: Dio110_4 },
-        { name: "Pearl Igneous Black", code: "#000000", image: Dio110_5 },
+        { name: "Mat Marvel Blue", code: "rgb(33, 111, 176)", image: Dio110_3 },
+        { name: "Pearl Igneous Black + Pearl Deep Ground Gray", code: "#000000", image: Dio110_4 },
+        { name: "Pearl Igneous Black", code: "rgb(195, 194, 195)", image: Dio110_5 },
       ];
       break;
 
