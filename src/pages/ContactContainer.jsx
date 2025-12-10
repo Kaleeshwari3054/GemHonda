@@ -48,8 +48,6 @@ const ContactContainer = () => {
 </p>
       <div className="email-row">
  
-    📧 <a href="mailto:gemmotors@thegemmotors.com">gemmotors@thegemmotors.com</a>
-<br/>
  
     📨 <a href="mailto:customercare@thegemmotors.com">customercare@thegemmotors.com</a>
  

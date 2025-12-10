@@ -293,34 +293,76 @@ const OffersSmoothScroll = () => {
           margin-bottom: 12px;
         }
 
-        /* CAROUSEL */
         .carousel-box {
-          width: 70%;
-          margin: auto;
-          overflow: hidden;
-          border-radius: 25px;
-          background: white;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        }
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
 
-        .carousel-track {
-          display: flex;
-          transition: transform 0.6s ease-in-out;
-        }
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
 
-        .carousel-slide {
-          min-width: 100%;
-          text-align: center;
-          padding: 20px;
-          transition: all 0.6s ease;
-        }
+.carousel-slide {
+  min-width: 100%;
+  padding: 16px 16px 24px;
+  display: flex;
+  flex-direction: column;    /* heading on top, image below */
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-        .carousel-slide img {
-          width: 100%;
-          height: 380px;
-          object-fit: cover;
-          border-radius: 20px;
-        }
+.slide-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;       /* space between heading and image */
+  color: #111;
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;              /* keep full image */
+  max-height: 360px;
+  object-fit: contain;       /* no cropping */
+  border-radius: 20px;
+}
+
+/* highlight current slide */
+.active-slide {
+  transform: scale(1.01);
+  filter: brightness(1.05);
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .carousel-box {
+    width: 100%;
+  }
+  .carousel-slide img {
+    max-height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-slide {
+    padding: 12px;
+  }
+  .slide-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .carousel-slide img {
+    max-height: 220px;
+  }
+}
+
 
         /* ✅ Highlight center */
         .active-slide {
