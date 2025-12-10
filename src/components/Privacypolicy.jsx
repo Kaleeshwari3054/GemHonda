@@ -1,15 +1,22 @@
 import React from "react";
 
+const Section = ({ title, children }) => (
+  <section className="mb-5">
+    <h2 className="h5 fw-semibold mb-3 text-dark">{title}</h2>
+    <div className="text-secondary lh-lg">{children}</div>
+  </section>
+);
+
 const Privacypolicy = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-2xl p-8 text-gray-800">
+    <div className="min-vh-100 bg-light py-5 px-3">
+      <div className="container bg-white shadow rounded-3 p-4 p-md-5 text-dark" style={{ maxWidth: "900px" }}>
         
-        <h1 className="text-3xl font-bold text-center mb-6">
+        <h1 className="display-6 fw-bold text-center mb-5">
           Privacy Policy – Gem Honda
         </h1>
 
-        <p className="mb-6 leading-relaxed">
+        <p className="mb-5 lh-lg">
           This Privacy Policy has been created to help visitors understand how
           Gem Honda collects, uses, protects, and manages Personally
           Identifiable Information (PII). PII, as defined under Indian privacy
@@ -27,28 +34,28 @@ const Privacypolicy = () => {
         </Section>
 
         <Section title="When We Collect Information">
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Fill out a form</li>
-            <li>Register on the website</li>
-            <li>Make a purchase</li>
-            <li>Enter information anywhere on the site</li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">Fill out a form</li>
+            <li className="mb-2 list-disc">Register on the website</li>
+            <li className="mb-2 list-disc">Make a purchase</li>
+            <li className="mb-2 list-disc">Enter information anywhere on the site</li>
           </ul>
         </Section>
 
         <Section title="How We Use Your Information">
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Respond to customer service requests efficiently</li>
-            <li>Process transactions quickly</li>
-            <li>Improve user experience and website performance</li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">Respond to customer service requests efficiently</li>
+            <li className="mb-2 list-disc">Process transactions quickly</li>
+            <li className="mb-2 list-disc">Improve user experience and website performance</li>
           </ul>
         </Section>
 
         <Section title="How We Protect Your Information">
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Gem Honda does not use vulnerability scanning or PCI standard scanning.</li>
-            <li>Gem Honda does not use Malware Scanning.</li>
-            <li>Gem Honda does not use an SSL certificate.</li>
-            <li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">Gem Honda does not use vulnerability scanning or PCI standard scanning.</li>
+            <li className="mb-2 list-disc">Gem Honda does not use Malware Scanning.</li>
+            <li className="mb-2 list-disc">Gem Honda does not use an SSL certificate.</li>
+            <li className="mb-2 list-disc">
               We do not require an SSL certificate because our website primarily
               provides information about automobiles available at the Gem Honda
               Showroom and facilitates “post service done” payments.
@@ -57,10 +64,10 @@ const Privacypolicy = () => {
         </Section>
 
         <Section title="Use of Cookies">
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Gem Honda does not use cookies for tracking.</li>
-            <li>You can disable cookies in your browser settings.</li>
-            <li>Some features may not work properly if cookies are disabled.</li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">Gem Honda does not use cookies for tracking.</li>
+            <li className="mb-2 list-disc">You can disable cookies in your browser settings.</li>
+            <li className="mb-2 list-disc">Some features may not work properly if cookies are disabled.</li>
           </ul>
         </Section>
 
@@ -81,10 +88,10 @@ const Privacypolicy = () => {
             visits.
           </p>
 
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Demographics and Interests Reporting</li>
-            <li>Use of first-party and third-party cookies</li>
-            <li>Website traffic and user behavior analysis</li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">Demographics and Interests Reporting</li>
+            <li className="mb-2 list-disc">Use of first-party and third-party cookies</li>
+            <li className="mb-2 list-disc">Website traffic and user behavior analysis</li>
           </ul>
         </Section>
 
@@ -99,33 +106,28 @@ const Privacypolicy = () => {
         </Section>
 
         <Section title="Fair Information Practices">
-          <ul className="list-disc ml-6 space-y-2">
-            <li>Users will be notified via email within 7 business days in case of a data breach.</li>
-            <li>We support individual redress rights.</li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">
+              Users will be notified via email within 7 business days in case of a data breach.
+            </li>
+            <li className="mb-2 list-disc">We support individual redress rights.</li>
           </ul>
         </Section>
 
         <Section title="CAN-SPAM Act Compliance">
-          <ul className="list-disc ml-6 space-y-2">
-            <li>We collect email addresses to communicate and send updates.</li>
-            <li>No misleading headers or subjects are used.</li>
-            <li>Opt-out requests are honored quickly.</li>
+          <ul className="list-unstyled ps-4">
+            <li className="mb-2 list-disc">We collect email addresses to communicate and send updates.</li>
+            <li className="mb-2 list-disc">No misleading headers or subjects are used.</li>
+            <li className="mb-2 list-disc">Opt-out requests are honored quickly.</li>
           </ul>
         </Section>
 
-        <p className="mt-8 text-center text-sm text-gray-500">
+        <p className="mt-5 text-center text-muted small">
           Last updated: {new Date().toLocaleDateString()}
         </p>
       </div>
     </div>
   );
 };
-
-const Section = ({ title, children }) => (
-  <div className="mb-6">
-    <h2 className="text-xl font-semibold mb-3 text-gray-900">{title}</h2>
-    <div className="text-gray-700 leading-relaxed">{children}</div>
-  </div>
-);
 
 export default Privacypolicy;

@@ -1,22 +1,13 @@
 import React from "react";
 
-/**
- * Disclaimer.jsx
- * React component (JSX) containing the vehicle information disclaimer for Gem Honda.
- * - Default export: Disclaimer
- * - Tailwind CSS classes used for quick styling (remove or change if you don't use Tailwind)
- *
- * Usage:
- * import Disclaimer from './Disclaimer';
- * <Disclaimer />
- *
- * You can pass a `dealerName` prop to replace the displayed dealer name.
- */
-
 export default function Disclaimer({ dealerName = "Gem Honda" }) {
   return (
-    <section className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow-md text-gray-800">
-      <h2 className="text-2xl font-semibold mb-4">Vehicle Information Disclaimer</h2>
+    <section
+      className="container my-5 p-4 bg-white rounded shadow-sm text-dark border border-secondary-subtle"
+      style={{ maxWidth: "900px", lineHeight: 1.6 }}
+      aria-label="Vehicle Information Disclaimer"
+    >
+      <h2 className="h3 fw-semibold mb-4">Vehicle Information Disclaimer</h2>
 
       <p className="mb-3">
         The information on vehicles provided by <strong>{dealerName}</strong> is provided on an <em>"as is"</em> and <em>"as available"</em> basis and {dealerName} makes no
@@ -55,10 +46,12 @@ export default function Disclaimer({ dealerName = "Gem Honda" }) {
         vehicles are subject to prior sale.
       </p>
 
-      <footer className="mt-4 text-sm text-gray-600">
-        <p>If you would like this disclaimer customized (add contact details, location, or legal counsel review language), pass the details and
-        I will update it.</p>
-      </footer>
+      {/* <footer className="mt-4 text-muted fst-italic small">
+        <p>
+          If you would like this disclaimer customized (add contact details, location, or legal counsel review language), pass the details and
+          I will update it.
+        </p>
+      </footer> */}
     </section>
   );
 }
