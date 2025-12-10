@@ -227,7 +227,6 @@ const Navbar = () => {
         {/* CALL NOW */}
         <li className="call-now-wrapper">
           <a
-            href="tel:+919094320000"
             className="call-now-btn"
              style={{
               backgroundColor: "hsl(0, 73%, 41%)",
@@ -239,7 +238,7 @@ const Navbar = () => {
               transition: "0.3s",
             }}
           >
-            Call Now
+            Call : 909 432 0000
           </a>
         </li>
       </ul>
