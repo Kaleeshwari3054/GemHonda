@@ -178,8 +178,8 @@
 }
 
 .carousel-indicators button {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 1px solid #424141;
  /* padding-left: 10px; */
@@ -208,104 +208,42 @@
 .carousel-fade .carousel-item.active {
   opacity: 1;
 }
-
+/* Tablet: 50vh base becomes 40vh (50vh - 10vh adjustment) */
 @media (max-width: 768px) {
-
-
-
-
-  .homepage-overlay h1 {
-    font-size: 2.5rem;
+  .homepage,
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  .banner-image,
+  .banner-image img {
+    height: calc(50vh - 10vh); /* 40vh */
   }
   
-  .homepage-overlay h2 {
-    font-size: 1.8rem;
-  }
-  
-  .homepage-overlay p {
-    font-size: 1.1rem;
-    padding: 0 15px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    max-width: 280px;
-    margin-bottom: 10px;
-  }
-
   .carousel-control-prev,
   .carousel-control-next {
-    width: 8%;
+    width: 10%;
   }
-
+  
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
   }
 }
 
+/* Mobile: 40vh becomes 30vh */
 @media (max-width: 480px) {
-  .homepage-overlay h1 {
-    font-size: 2rem;
+  .homepage,
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  .banner-image,
+  .banner-image img {
+    height: calc(40vh - 10vh); /* 30vh */
   }
   
-  .homepage-overlay h2 {
-    font-size: 1.5rem;
-  }
-  
-  .homepage-overlay p {
-    font-size: 1rem;
-  }
-
-  .hero-buttons .btn {
-    padding: 10px 25px;
-    font-size: 0.9rem;
-  }
-
-  .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-  }
-}
-
-/* Animation for slide transitions */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.carousel-item-next .homepage-overlay {
-  animation: slideInRight 0.6s ease-out;
-}
-
-.carousel-item-prev .homepage-overlay {
-  animation: slideInLeft 0.6s ease-out;
-}
-@media (max-width: 480px) {
-  .banner-image {
-    height: 65vh;
+  .banner-image img {
+    max-width: calc(100vw - 20px);
+    border-radius: 15px;
   }
 }

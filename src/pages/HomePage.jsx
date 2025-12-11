@@ -50,12 +50,12 @@ const HomePage = () => {
   }, [scooterImages.length]);
 
   // ✅ Manual controls
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev + 1) % scooterImages.length);
-  const prevSlide = () =>
-    setCurrentSlide(
-      (prev) => (prev - 1 + scooterImages.length) % scooterImages.length
-    );
+  // const nextSlide = () =>
+  //   setCurrentSlide((prev) => (prev + 1) % scooterImages.length);
+  // const prevSlide = () =>
+  //   setCurrentSlide(
+  //     (prev) => (prev - 1 + scooterImages.length) % scooterImages.length
+  //   );
   const goToSlide = (index) => setCurrentSlide(index);
 
   return (
@@ -96,7 +96,7 @@ const HomePage = () => {
         </div>
 
         {/* ✅ Controls */}
-        <button
+        {/* <button
           className="carousel-control-prev"
           type="button"
           onClick={prevSlide}
@@ -111,7 +111,7 @@ const HomePage = () => {
         >
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
-        </button>
+        </button> */}
       </div>
     </div>
   );
