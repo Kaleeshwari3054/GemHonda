@@ -101,7 +101,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../Styles/Navbar.css";
-import Logo from "../assets/GemHondaLogo.png";
+// import Logo from "../assets/GemHondaLogo.png";
+import Logo from "../assets/Home-logo.png"
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -143,7 +144,7 @@ const Navbar = () => {
     <nav className="navbar">
       <NavLink to="/" className="navbar-logo">
         <img src={Logo} alt="Honda Logo" className="logo" />
-        <span className="logo-text">GEM HONDA</span>
+        {/* <span className="logo-text">GEM HONDA</span> */}
       </NavLink>
 
       <ul className={`navbar-links ${mobileMenuOpen ? "active" : ""}`}>
