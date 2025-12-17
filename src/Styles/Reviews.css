@@ -1,3 +1,4 @@
+/* Existing slider styles */
 .reviews-slider {
   width: 90%;
   margin: 10px auto;
@@ -12,21 +13,130 @@
   animation: scrollReviews 45s linear infinite;
 }
 
-.review-card {
-  max-width: 300px;
-}
+.review-card { max-width: 300px; }
 
 @keyframes scrollReviews {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 @media (max-width: 768px) {
-  .review-card {
-    min-width: 280px;
+  .review-card { min-width: 280px; }
+}
+
+/* NEW HEADER STYLES */
+.reviews-main-heading {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.customer-reviews-title {
+  color: #495057;
+  font-size: 1.75rem;
+}
+
+/* LEFT JUSDIAl & RIGHT GOOGLE */
+/* .jusdial-review, .google-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 12px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  border: 1px solid #f1f5f9;
+  height: 100px;
+  transition: all 0.3s ease;
+  max-width: 200px;
+  margin: 0 auto;
+} */
+
+.jusdial-review:hover, .google-review:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.18);
+}
+
+/* IMAGE ABOVE */
+.review-logo {
+  height: 25px;
+  width: auto;
+}
+/* Google Logo PERFECT ZOOM - Width only */
+.google-logo {
+  height: 28px !important; /* Height fixed - NO CRASH */
+  width: 140px !important; /* Width zoom pannu */
+  object-fit: contain; /* Perfect fit without distortion */
+  min-width: 120px; /* Minimum zoom */
+}
+
+/* Jusdial also zoom if needed */
+.review-logo:not(.google-logo) {
+  height: 28px !important;
+  width: 100px !important; /* Jusdial width zoom */
+  object-fit: contain;
+}
+
+/* Container for zoom effect - NO HEIGHT CHANGE */
+.jusdial-review, .google-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  border: 1px solid #f1f5f9;
+  height: 120px !important; /* Fixed height - NO CRASH */
+  transition: all 0.3s ease;
+  max-width: 260px; /* Extra width for zoom */
+  margin: 0 auto;
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* .google-logo {
+  height: 36px !important;
+} */
+
+/* POINTS BELOW */
+.review-points {
+  text-align: center;
+  margin-top: auto;
+}
+
+.points {
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 2px;
+  display: flex!important;
+}
+
+.count {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .jusdial-review, .google-review {
+    margin-bottom: 20px;
+    height: 130px;
   }
+  
+  .review-logo { height: 40px; }
+  .google-logo { height: 32px !important; }
+  .points { font-size: 32px; }
 }

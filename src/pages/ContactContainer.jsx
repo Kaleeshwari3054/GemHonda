@@ -419,7 +419,7 @@ Message: ${formData.message}
           <div className="email-row">
             📨{" "}
             <a href="mailto:customercare@thegemmotors.com">
-              customercare@thegemmotors.com
+               gemhondamd@gmail.com
             </a>
           </div>
 
