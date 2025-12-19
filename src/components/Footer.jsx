@@ -112,7 +112,7 @@ const Footer = () => {
       <h5>Contact Us</h5>
       <p>
         📞 <a href="tel:+919094320000">+91 909 432 0000</a><br />
-        📨 <a href="mailto:customercare@thegemmotors.com"> gemhondamd@gmail.com</a>
+        📨 <a href="mailto:gemhondamd@gmail.com"> gemhondamd@gmail.com</a>
       </p>
     </div>
 
