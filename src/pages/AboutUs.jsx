@@ -137,11 +137,13 @@ import About5 from "../assets/About-img/Aboutus-5.jpeg";
 import About6 from "../assets/About-img/Aboutus-6.jpeg";
 import About7 from "../assets/About-img/Aboutus-7.jpeg";
 import About8 from "../assets/About-img/Aboutus-8.jpeg";
-import About9 from "../assets/About-img/Aboutus-9.jpeg";
+// import About9 from "../assets/About-img/Aboutus-9.jpeg";
+import About10 from "../assets/About-img/Aboutus-10.jpeg";
+import About11 from "../assets/About-img/Aboutus-11.jpeg";
 
 export default function AboutUs() {
   const images = [
-    About1, Abou2, About3, About4, About5, About6, About7, About8, About9
+    About1, Abou2, About3, About4, About5, About6, About7, About8, About10, About11
   ];
   
   const [current, setCurrent] = useState(0);

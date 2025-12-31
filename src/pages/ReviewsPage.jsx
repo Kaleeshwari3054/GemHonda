@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Row, Col, Card, Image } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Card, Image, Button } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "../Styles/Reviews.css";
 
-const reviews = [
+const Reviews = [
   {
     name: "RAJA",
     image: "https://content.jdmagicbox.com/mobile-t/icon/jdsocial/user89.png",
@@ -23,7 +22,6 @@ const reviews = [
     review:
       "Very good service by GEM Honda..! They are trained very well for Major works and customer activity..!",
   },
-
   {
     name: "SENTHIL",
     image: "https://content.jdmagicbox.com/mobile-t/icon/jdsocial/user93.png",
@@ -64,97 +62,98 @@ const reviews = [
   },
 ];
 
-const Reviews = () => {
+const Reviewspage = () => {
+  const [activeTab, setActiveTab] = useState("mixed"); // "mixed", "google", "jusdial"
+
+  const handleGoogleClick = () => setActiveTab("google");
+  const handleJusdialClick = () => setActiveTab("jusdial");
+
+  const renderReviews = () => {
+    if (activeTab === "google") {
+      return Reviewspage.slice(0, 8); // Show first 8 as Google reviews
+    } else if (activeTab === "jusdial") {
+      return Reviewspage.slice(2, 10); // Show different set as Jusdial reviews
+    }
+    return Reviewspage;
+  };
+
   return (
-    <div style={{ background: "#f8f9fa", padding: "60px 0" }} id="Reviews-sec">
+    <div className="reviews-section" id="Reviews-sec">
       {/* Perfect Reviews Header */}
       <Container>
         <Row className="justify-content-center mb-5">
-          {/* CENTER HEADING */}
-          <Col xs={12} className="text-center mb-4">
-            <h2 className="fw-bold display-5 reviews-main-heading">
-              What Our Customers Say
-            </h2>
-            <p className="text-muted lead mt-2">
+          <Col xs={12} className="text-center mb-5">
+            <h2 className="reviews-main-heading">What Our Customers Say</h2>
+            <p className="reviews-subtitle">
               Trusted by thousands of happy customers
             </p>
           </Col>
 
           {/* CLICKABLE Google + Jusdial Row */}
-          <Col md={6} className="text-md-end text-center">
-            {/* <a
+          {/* CLICKABLE Google + Jusdial Row - LINKS TO SEPARATE PAGES */}
+          <Col md={6} className="text-md-end text-center mb-4 mb-md-0">
+            <a
               href="/google-reviews"
-              className="review-link google-review-link"
-            > */}
-            <Link to="/google-reviews" className="review-link google-review-link">
-
-              <div className="google-review">
-                <img
-                  src="https://static.vecteezy.com/system/resources/previews/028/667/072/non_2x/google-logo-icon-symbol-free-png.png"
-                  alt="Google"
-                  className="review-logo google-logo"
-                />
-                <div className="review-points">
-                  <div className="points">
-                    4.2 <span className="count">(1253)</span>
-                  </div>
-                </div>
+              className={`review-platform-btn google-review-btn ${
+                activeTab === "google" ? "active" : ""
+              }`}
+            >
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/028/667/072/non_2x/google-logo-icon-symbol-free-png.png"
+                alt="Google Reviews"
+                className="platform-logo google-logo"
+              />
+              <div className="review-points">
+                <div className="rating-points">4.2</div>
+                <span className="review-count">(1253)</span>
               </div>
-            </Link>
+            </a>
           </Col>
-          <Col md={6} className="text-md-start text-center mb-3 mb-md-0">
-            {/* <a
+          <Col md={6} className="text-md-start text-center">
+            <a
               href="/jusdial-reviews"
-              className="review-link jusdial-review-link"
-            > */}
-            <Link to="/jusdial-reviews" className="review-link jusdial-review-link">
-
-              <div className="jusdial-review">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/2560px-Justdial_Logo.svg.png"
-                  alt="Jusdial"
-                  className="review-logo"
-                />
-                <div className="review-points">
-                  <div className="points">
-                    4.2 <span className="count">(1878)</span>
-                  </div>
-                </div>
+              className={`review-platform-btn jusdial-review-btn ${
+                activeTab === "jusdial" ? "active" : ""
+              }`}
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/2560px-Justdial_Logo.svg.png"
+                alt="Jusdial Reviews"
+                className="platform-logo"
+              />
+              <div className="review-points">
+                <div className="rating-points">4.2</div>
+                <span className="review-count">(1878)</span>
               </div>
-            </Link>
+            </a>
           </Col>
         </Row>
       </Container>
 
-      {/* Existing Slider */}
+      {/* Dynamic Reviews Slider */}
       <Container>
-        <div className="reviews-slider">
+        <div className="reviews-slider-container">
           <div className="reviews-track">
-            {[...reviews, ...reviews].map((item, index) => (
-              <div className="review-card" key={index}>
-                <Card className="shadow-sm border-0 rounded-4 p-3 h-100">
-                  <div className="d-flex align-items-center mb-3">
+            {[...renderReviews(), ...renderReviews()].map((item, index) => (
+              <div className="review-card-wrapper" key={index}>
+                <Card className="review-card h-100">
+                  <div className="review-header">
                     <Image
                       src={item.image}
                       roundedCircle
                       width="60"
                       height="60"
-                      className="me-3"
+                      className="review-avatar"
                       alt={item.name}
                     />
-                    <h5 className="fw-bold mb-0">{item.name}</h5>
+                    <h5 className="reviewer-name">{item.name}</h5>
                   </div>
-                  <div className="mb-2">
+                  <div className="review-stars">
                     {[...Array(5)].map((_, i) => (
                       <FaStar key={i} color="#fbc02d" size={14} />
                     ))}
                   </div>
-                  <Card.Text
-                    className="text-muted"
-                    style={{ fontSize: "15px" }}
-                  >
-                    {item.review}
-                  </Card.Text>
+                  <Card.Text className="review-text">{item.review}</Card.Text>
                 </Card>
               </div>
             ))}
@@ -165,4 +164,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default Reviewspage;

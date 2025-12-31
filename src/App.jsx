@@ -22,6 +22,9 @@ import Termsandcondition from "./components/Termsandcondition";
 import ScrollToTop from "./pages/ScrollToTop";
 import Offers from "./pages/Offers";
 import Reviews from "./pages/Reviews";
+import GoogleReviews from "./pages/GoogleReviewspage";
+import JusdialReviews from "./pages/JusdialReviews";
+import Reviewspage from "./pages/ReviewsPage";
 function App() {
   return (
     <>
@@ -62,6 +65,8 @@ function App() {
             element={<ScooterColours />}
           />
           <Route path="/offers" element={<Offers />} />
+          <Route path="/google-reviews" element={<GoogleReviews />} />
+        <Route path="/jusdial-reviews" element={<JusdialReviews />} />
         </Routes>
       </div>
       <Footer />

@@ -1,0 +1,73 @@
+/* GoogleReviews.css */
+.google-reviews-page {
+    background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+    min-height: 100vh;
+}
+
+.google-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+}
+
+.google-page-logo {
+    height: 60px;
+}
+
+.google-title {
+    color: #4285f4;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.google-review-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.google-review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* JusdialReviews.css */
+.jusdial-reviews-page {
+  background: linear-gradient(135deg, #34a853 0%, #4285f4 100%);
+    /* background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); */
+
+    min-height: 100vh;
+}
+
+.jusdial-header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+}
+
+.jusdial-page-logo {
+    height: 60px;
+}
+
+.jusdial-title {
+    color: #ff6b35;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.jusdial-review-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.jusdial-review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}

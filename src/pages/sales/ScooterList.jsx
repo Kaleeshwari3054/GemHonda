@@ -64,7 +64,7 @@ const ScooterList = () => {
       {/* 🚀 Banner Section */}
       <div className="scooter-banner">
         <img
-          src="https://www.vihaanhonda.com/assets/img/Activa_special_Edition_homeBanner.jpg"
+          src="https://www.thegemmotors.com/assets/activa--d--19212-BDIfC2Fc.jpg"
           alt="Scooter Banner"
           className="banner-image-Scooter"
         />

@@ -140,3 +140,16 @@
   .google-logo { height: 32px !important; }
   .points { font-size: 32px; }
 }
+
+/* CLICKABLE LINKS */
+.review-link {
+  display: block;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.google-review-link:hover .google-review,
+.jusdial-review-link:hover .jusdial-review {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
