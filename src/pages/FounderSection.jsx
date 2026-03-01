@@ -1,8 +1,10 @@
 import React from "react";
 import "../Styles/FounderSection.css";
 
+
 import Logo from "../assets/Logo.jpg";
 
+// import Logo from "../assets/GemHondaLogo.png";
 import Logo from "../assets/GemHondaLogo.png";
 const FounderSection = () => {
   return (
