@@ -66,7 +66,7 @@ function App() {
           />
           <Route path="/offers" element={<Offers />} />
           <Route path="/google-reviews" element={<GoogleReviews />} />
-        <Route path="/jusdial-reviews" element={<JusdialReviews />} />
+          <Route path="/jusdial-reviews" element={<JusdialReviews />} />
         </Routes>
       </div>
       <Footer />

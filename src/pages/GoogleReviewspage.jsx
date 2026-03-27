@@ -7,6 +7,7 @@ import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
 import "../Styles/Reviewspage.css";
 
+
 const googleReviewsData = [
   {
     name: "RAJA",

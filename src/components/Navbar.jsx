@@ -237,6 +237,7 @@ const Navbar = () => {
               fontWeight: "500",
               textDecoration: "none",
               transition: "0.3s",
+              marginRight: "20px",
             }}
           >
             Call : 909 432 0000

@@ -115,7 +115,7 @@ const Reviews = () => {
 
               <div className="jusdial-review">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/2560px-Justdial_Logo.svg.png"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/960px-Justdial_Logo.svg.png"
                   alt="Jusdial"
                   className="review-logo"
                 />
