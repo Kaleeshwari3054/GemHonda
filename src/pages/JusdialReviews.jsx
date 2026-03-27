@@ -57,7 +57,9 @@ const JusdialReviews = () => {
         <Row className="justify-content-center text-center mb-5">
           <Col md={8}>
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/2560px-Justdial_Logo.svg.png"
+              // src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/2560px-Justdial_Logo.svg.png"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Justdial_Logo.svg/960px-Justdial_Logo.svg.png"
+
               alt="Jusdial"
               style={{ height: "60px", marginBottom: "20px" }}
             />
