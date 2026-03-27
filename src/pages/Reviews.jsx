@@ -72,9 +72,13 @@ const Reviews = () => {
         <Row className="justify-content-center mb-5">
           {/* CENTER HEADING */}
           <Col xs={12} className="text-center mb-4">
-            <h2 className="fw-bold display-5 reviews-main-heading">
+            {/* <h2 className="fw-bold display-5 reviews-main-heading">
               What Our Customers Say
-            </h2>
+            </h2> */}
+
+            <h2 className="fw-bold mb-3 text-center col-12">
+          What Our <span style={{ color: "hsl(0, 73%, 41%)" }}>Customers Say</span>  
+        </h2>
             <p className="text-muted lead mt-2">
               Trusted by thousands of happy customers
             </p>

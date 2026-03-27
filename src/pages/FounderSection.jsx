@@ -96,7 +96,10 @@ const FounderSection = () => {
 
         {/* Company Values */}
         <div className="company-values">
-          <h3>Our Core Values</h3>
+          {/* <h3>Our Core Values</h3> */}
+          <h2 className="fw-bold mb-3 text-center col-12">
+          Our <span style={{ color: "hsl(0, 73%, 41%)" }}>Core Values</span>
+        </h2>
           <div className="values-grid">
             <div className="value-item">
               <div className="value-icon">
@@ -133,7 +136,10 @@ const FounderSection = () => {
 
         {/* Company Location & Contact */}
         <div className="company-location">
-          <h3>Visit Our Showroom</h3>
+          {/* <h3>Visit Our Showroom</h3> */}
+          <h2 className="fw-bold mb-3 text-center col-12">
+         Visit <span style={{ color: "hsl(0, 73%, 41%)" }}>Our Showroom</span>
+        </h2>
           <div className="location-content">
             <div className="location-info">
               <div className="company-logo">
